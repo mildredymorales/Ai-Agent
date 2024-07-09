@@ -31,7 +31,7 @@ class BiologicalAnalysisTask():
     
     def compare_findings(self, agent):
         return Task(
-            description = f"Your mission is to analyze and compare the conclusions drawn by each of the 10 biological agents that previously analyzed the clade of genes. Based on their analysis of the genetic data give a percentage of how similar each hypothesis is and rank each of the agents. In the analysis focus including the style and manner in which the information is presented by each agent.",
+            description = f"Your mission is to analyze and compare the conclusions drawn by each of the 10 biological agents that previously analyzed the clade of genes. Based on their analysis of the genetic data give a percentage of how unique each hypothesis is.",
             agent = agent,
             expected_output = "a couple of paragraphs",
         )
