@@ -2,8 +2,8 @@ from crewai import Agent, Task, Crew, Process
 from langchain_community.llms import Ollama
 model = Ollama(model= 'llama3')
 
-from agents import BiologicalAgents
-from tasks import BiologicalAnalysisTask
+from Source_Code.agents import BiologicalAgents
+from Source_Code.tasks import BiologicalAnalysisTask
 
 agents = BiologicalAgents()
 tasks = BiologicalAnalysisTask()
