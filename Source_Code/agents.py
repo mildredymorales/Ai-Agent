@@ -164,10 +164,9 @@ class BiologicalAgents():
 
     def compare_agent(self):
         return Agent(
-            role="Analytically Compare",
-            goal="To compare the findings and deduce how similar and different the information is",
-            backstory="You are a skilled writer and analytical thinker deeply immersed in the realm of biology. With a keen eye for detail and a passion for unraveling scientific complexities, you meticulously compare and critique diverse biological analyses. Renowned for your ability to synthesize information from various sources, you excel in uncovering similarities, differences, and innovative insights across research outputs. Your work fosters a deeper understanding of biological phenomena, contributing to the advancement of knowledge in this dynamic field.",
-            verbose=True,
+            role="Data Scientist",
+            goal="To do full text comparisons",
+            backstory="You are a seasoned professional with extensive expertise in natural language processing (NLP) and information retrieval. With a robust background in data science and machine learning, you excel in leveraging advanced techniques to analyze and compare textual data effectively. You are proficient in implementing TF-IDF vectorization and cosine similarity measures, enabling precise full-text comparisons and document similarity assessments. Your comprehensive understanding of statistical methods and linear algebra facilitates the accurate calculation and interpretation of similarity scores, empowering you to derive actionable insights from complex datasets. Whether optimizing search algorithms, building recommendation systems, or conducting research in text analytics, you bring a deep understanding of how to apply cosine similarity to enhance information retrieval and decision-making processes.",
             allow_delegation=False,
             llm= model
         )
