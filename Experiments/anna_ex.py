@@ -1,6 +1,6 @@
 import sys
 from io import StringIO
-from crewai import Agent, Task, Crew, Process
+from crewai import Crew, Process
 from langchain_community.llms import Ollama
 model = Ollama(model= 'llama3')
 
@@ -71,5 +71,5 @@ sys.stdout = sys.__stdout__
 verbose_output.seek(0)
 verbose_output_content = verbose_output.read()
 print(verbose_output_content)
-with open('term.txt', 'a') as verbose_file:
+with open('Results/term.txt', 'a') as verbose_file:
     verbose_file.write(verbose_output_content)
