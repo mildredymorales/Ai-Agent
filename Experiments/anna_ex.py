@@ -16,9 +16,11 @@ sys.stdout = verbose_output
 print("## Welcome to the Biology Crew")
 print('-------------------------------')
 
-genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
 
-term = 'immune response'
+
+genes = input("Insert the genes to be analyzed as a list?\n")
+
+term = input("What is the the biological term you want it to specifically analyze as?\n")
 
 # Define your custom agents and tasks here
 custom_agent_1 = agents.cellular_biologist()
