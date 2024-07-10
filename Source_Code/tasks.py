@@ -31,7 +31,7 @@ class BiologicalAnalysisTask():
     
     def compare_findings(self, agent):
         return Task(
-            description = f"Your mission is to analyze and compare the conclusions drawn by each of the 10 biological agents that previously analyzed the clade of genes. Based on their analysis of the genetic data use the cosine similarity between TF-IDF vectors to calculate.",
+            description = f"Your mission is to analyze and compare the conclusions drawn by each of the 10 biological agents that previously analyzed the clade of genes using the cosine similarity between TF-IDF vectors approach.",
             agent = agent,
             expected_output = "a couple of paragraphs",
         )
