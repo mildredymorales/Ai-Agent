@@ -19,43 +19,65 @@ print('-------------------------------')
 genes = 'GPR153, TMEM100, FRMPD1, ANKRD22, TMEM86A, UNC80, CLIC2, STEAP4, TROAP, DLGAP5, KIF20A, KIF18B, KIF14,  PRSS12, RNASE1, RNASE4, TFPI2, GBP5, OASL, AGR2, CFAP70, METRNL, MANSC4'
 
 # Define your custom agents here
+custom_agent_1 = agents.cellular_biologist()
+custom_agent_2 = agents.computational_biologist()
+custom_agent_3 = agents.cell_cyc()
+custom_agent_4 = agents.drug_dev()
+custom_agent_5 = agents.epigenetics_biologist()
+custom_agent_6 = agents.genereg_expert()
+custom_agent_7 = agents.molecular_biologist()
+custom_agent_8 = agents.onco_res()
+custom_agent_9 = agents.oncologist_physician()
+custom_agent_10 = agents.systems_biologist()
+
+
 custom_agents = [
-    agents.cellular_biologist(),
-    agents.computational_biologist(),
-    agents.cell_cyc(),
-    agents.drug_dev(),
-    agents.epigenetics_biologist(),
-    agents.genereg_expert(),
-    agents.molecular_biologist(),
-    agents.onco_res(),
-    agents.oncologist_physician(),
-    agents.systems_biologist()
+    custom_agent_1, custom_agent_2, custom_agent_3,custom_agent_3,custom_agent_5,custom_agent_6,custom_agent_7,custom_agent_8, custom_agent_9,custom_agent_10
 ]
 
 # Define your custom tasks here
-task_definitions = [
-    tasks10.immune_response,
-    tasks10.metabolic_process,
-    tasks10.cell_cycle,
-    tasks10.cell_comm,
-    tasks10.signal_trans,
-    tasks10.apop,
-    tasks10.develop,
-    tasks10.repro,
-    tasks10.transport,
-    tasks10.reg_biop
+custom_task_1 = tasks10.immune_response(
+    custom_agents, genes,
+)
+custom_task_2 = tasks10.metabolic_process(
+    custom_agents, genes,
+)
+custom_task_3 = tasks10.cell_cycle(
+    custom_agents, genes,
+)
+custom_task_4 = tasks10.cell_comm(
+    custom_agents, genes,
+)
+custom_task_5 = tasks10.signal_trans(
+    custom_agents, genes,
+)
+custom_task_6 = tasks10.apop(
+    custom_agents, genes,
+)
+custom_task_7 = tasks10.develop(
+    custom_agents, genes,
+)
+custom_task_8 = tasks10.repro(
+    custom_agents, genes,
+)
+custom_task_9 = tasks10.transport(
+    custom_agents, genes,
+)
+custom_task_10 = tasks10.reg_biop(
+    custom_agents, genes,
+)
+
+task_definitions = [ custom_task_1, custom_task_2, custom_task_3, custom_task_4, custom_task_5, custom_task_6, custom_task_7, custom_task_8, custom_task_9, custom_task_10
 ]
 
-# Create a list of task instances for each agent
-task_instances = [[task(agent, genes) for task in task_definitions] for agent in custom_agents]
-
-# Define your custom crew here
 crew = Crew(
-    agents=custom_agents,
-    tasks=task_instances,
-    verbose=True,
-    process=Process.sequential
+        agents= custom_agents,
+        tasks= task_definitions,
+        verbose=True,
+        process = Process.sequential
 )
+
+
 
 result = crew.kickoff()
 print(result)
