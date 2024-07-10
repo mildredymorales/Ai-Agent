@@ -4,6 +4,7 @@ from crewai import Agent, Task, Crew, Process
 from langchain_community.llms import Ollama
 model = Ollama(model= 'llama3')
 
+
 from Source_Code.agents import BiologicalAgents
 from Source_Code.tasks import BiologicalAnalysisTask
 
@@ -21,6 +22,7 @@ print('-------------------------------')
 genes = input("Insert the genes to be analyzed as a list?\n")
 
 term = input("What is the the biological term you want it to specifically analyze as?\n")
+
 
 # Define your custom agents and tasks here
 custom_agent_1 = agents.cellular_biologist()
@@ -69,5 +71,5 @@ sys.stdout = sys.__stdout__
 verbose_output.seek(0)
 verbose_output_content = verbose_output.read()
 print(verbose_output_content)
-with open('clade2log.txt', 'a') as verbose_file:
+with open('term.txt', 'a') as verbose_file:
     verbose_file.write(verbose_output_content)
