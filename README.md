@@ -7,7 +7,7 @@ This repository contains the necessary files to deploy and manage CrewAI Agents 
 This branch is specialized for running cell cycle experiments. This branch focuses on testing to assess its variability and accuracy in executing tasks.
 
 # Experiments
-Within the experiments directory, an example file demonstrates clade analysis in relation to the cell cycle. There will be experiments with analyzing tasks with different parameters to see its effect on outputs.
+Within the experiments directory, an example file demonstrates clade analysis in relation to the cell cycle. There will be experiments with analyzing tasks with different parameters to see its effect on outputs. The task : term, is where this happens as the parameter for a terms is inputted there.
 
 # Results
 Results from conducted experiments are stored in the results folder, where log files are saved.
