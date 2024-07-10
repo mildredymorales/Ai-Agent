@@ -4,6 +4,8 @@ from crewai import Agent, Task, Crew, Process
 from langchain_community.llms import Ollama
 model = Ollama(model= 'llama3')
 
+sys.path.insert(0, '/Users/mildredmorales-paredes/Ai-Agent')
+
 from Source_Code.agents import BiologicalAgents
 from Source_Code.tasks import BiologicalAnalysisTask
 
