@@ -1,6 +1,6 @@
 from crewai import Task
 
-class BiologicalAnalysisTask10():
+class Task10Analysis():
     def immune_response(self, agent, genes):
         return Task(
             description = f"I will provide you with {genes}."
