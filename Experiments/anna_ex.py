@@ -26,63 +26,63 @@ verbose_output = StringIO()
 sys.stdout = verbose_output
 
 # Define your custom agents and tasks here
-custom_agent_1 = agents.cellular_biologist()
-custom_agent_2 = agents.computational_biologist()
-custom_agent_3 = agents.cell_cyc()
-custom_agent_4 = agents.drug_dev()
-custom_agent_5 = agents.epigenetics_biologist()
-custom_agent_6 = agents.genereg_expert()
-custom_agent_7 = agents.molecular_biologist()
-custom_agent_8 = agents.onco_res()
-custom_agent_9 = agents.oncologist_physician()
-custom_agent_10 = agents.systems_biologist()
+cell_bio_agent = agents.cellular_biologist()
+comp_bio_agent = agents.computational_biologist()
+cell_cyc_agent = agents.cell_cyc()
+drug_dev_agent = agents.drug_dev()
+epig_bio_agent = agents.epigenetics_biologist()
+gene_reg_agent = agents.genereg_expert()
+molec_bio_agent = agents.molecular_biologist()
+onco_res_agent = agents.onco_res()
+onco_phy_agent = agents.oncologist_physician()
+sys_bio_agent = agents.systems_biologist()
 
-custom_agent_11 = agents.compare_agent()
+analytical_agent = agents.compare_agent()
 
-custom_task_1 = tasks.term(
-    custom_agent_1, genes, term
+cell_bio_task = tasks.term(
+    cell_bio_agent, genes, term
 )
-custom_task_2 = tasks.term(
-    custom_agent_2, genes, term
+comp_bio_task = tasks.term(
+    comp_bio_agent, genes, term
 )
-custom_task_3 = tasks.term(
-    custom_agent_3, genes, term
+cell_cyc_task = tasks.term(
+    cell_cyc_agent, genes, term
 )
-custom_task_4 = tasks.term(
-    custom_agent_4, genes, term
+drug_dev_task = tasks.term(
+    drug_dev_agent, genes, term
 )
-custom_task_5 = tasks.term(
-    custom_agent_5, genes, term
+epig_bio_task = tasks.term(
+    epig_bio_agent, genes, term
 )
-custom_task_6 = tasks.term(
-    custom_agent_6, genes, term
+gene_reg_task = tasks.term(
+    gene_reg_agent, genes, term
 )
-custom_task_7 = tasks.term(
-    custom_agent_7, genes, term
+mol_bio_task = tasks.term(
+    molec_bio_agent, genes, term
 )
-custom_task_8 = tasks.term(
-    custom_agent_8, genes, term
+onco_res_task = tasks.term(
+    onco_res_agent, genes, term
 )
-custom_task_9 = tasks.term(
-    custom_agent_9, genes, term
+onco_phy_task = tasks.term(
+    onco_phy_agent, genes, term
 )
-custom_task_10 = tasks.term(
-    custom_agent_10, genes, term
+sys_bio_task = tasks.term(
+    sys_bio_agent, genes, term
 )
 
 
-custom_task_11 = tasks.compare_findings(
-    custom_agent_11
+compare_task = tasks.compare_findings(
+    analytical_agent
 )
 
 # Define your custom crew here
 crew = Crew(
         agents=[
-            custom_agent_1, custom_agent_2, custom_agent_3,custom_agent_3,custom_agent_5,custom_agent_6,custom_agent_7,custom_agent_8,
-            custom_agent_9,custom_agent_10, custom_agent_11, 
+            cell_bio_agent, comp_bio_agent, cell_cyc_agent, drug_dev_agent, epig_bio_agent, gene_reg_agent, molec_bio_agent, onco_res_agent,
+            onco_phy_agent, sys_bio_agent, analytical_agent, 
             ],
         tasks=[
-            custom_task_1, custom_task_2, custom_task_3, custom_task_4, custom_task_5, custom_task_6, custom_task_7, custom_task_8, custom_task_9, custom_task_10, custom_task_11,
+            cell_bio_task, comp_bio_task, cell_cyc_task, drug_dev_task, epig_bio_task, gene_reg_task, mol_bio_task, onco_res_task, onco_phy_task, onco_phy_task, sys_bio_task, compare_task,
             ],
         verbose=True,
         process = Process.sequential
