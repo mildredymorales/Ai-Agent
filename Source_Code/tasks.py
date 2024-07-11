@@ -42,7 +42,7 @@ class BiologicalAnalysisTask():
     
     def term(self, agent, genes, term):
         return Task(
-            description = f"Your task is to conduct a comprehensive biological analysis based on your expertise. Gather detailed information on the role of each gene in the biological process of {term}, 
+            description = f"Your task is to conduct a comprehensive biological analysis of the {genes} based on your expertise. Gather detailed information on the role of each gene in the biological process of {term}, 
             how these genes interact with each other, the pathways or mechanisms they are involved in, and relevant research findings and studies that highlight their functions and interactions.",
             agent = agent,
             expected_output = "a couple of paragraphs",
