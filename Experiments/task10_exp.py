@@ -2,7 +2,7 @@ import sys
 from io import StringIO
 from crewai import Agent, Task, Crew, Process
 from langchain_community.llms import Ollama
-model = Ollama(model= 'llama3')
+model = Ollama(model='llama3')
 
 from agents import BiologicalAgents
 from tasks10 import Task10Analysis
@@ -16,7 +16,7 @@ sys.stdout = verbose_output
 print("## Welcome to the Biology Crew")
 print('-------------------------------')
 
-genes = 'GPR153, TMEM100, FRMPD1, ANKRD22, TMEM86A, UNC80, CLIC2, STEAP4, TROAP, DLGAP5, KIF20A, KIF18B, KIF14,  PRSS12, RNASE1, RNASE4, TFPI2, GBP5, OASL, AGR2, CFAP70, METRNL, MANSC4'
+genes = 'GPR153, TMEM100, FRMPD1, ANKRD22, TMEM86A, UNC80, CLIC2, STEAP4, TROAP, DLGAP5, KIF20A, KIF18B, KIF14, PRSS12, RNASE1, RNASE4, TFPI2, GBP5, OASL, AGR2, CFAP70, METRNL, MANSC4'
 
 # Define your custom agents here
 cell_biol = agents.cellular_biologist()
@@ -30,59 +30,57 @@ onco_rese = agents.onco_res()
 onco_phys = agents.oncologist_physician()
 systems_biol = agents.systems_biologist()
 
-
 custom_agents = [
-    cell_biol, comp_biol, cell_exp,drug_devo,epi_biol,genereg_expe,mol_biol,onco_rese, onco_phys,systems_biol
+    cell_biol, comp_biol, cell_exp, drug_devo, epi_biol, genereg_expe, mol_biol, onco_rese, onco_phys, systems_biol
 ]
 
 # Define your custom tasks here
 imm_resp = tasks10.immune_response(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 meta_proc = tasks10.metabolic_process(
-    custom_agents, genes,
+    comp_biol, genes,
 )
 cell_cycl = tasks10.cell_cycle(
-    custom_agents, genes,
+    cell_exp, genes,
 )
 cell_commu = tasks10.cell_comm(
-    custom_agents, genes,
+    drug_devo, genes,
 )
 sig_trans = tasks10.signal_trans(
-    custom_agents, genes,
+    epi_biol, genes,
 )
 apopt = tasks10.apop(
-    custom_agents, genes,
+    genereg_expe, genes,
 )
 devel = tasks10.develop(
-    custom_agents, genes,
+    mol_biol, genes,
 )
 reprod = tasks10.repro(
-    custom_agents, genes,
+    onco_rese, genes,
 )
 transp = tasks10.transport(
-    custom_agents, genes,
+    onco_phys, genes,
 )
 regu_biop = tasks10.reg_biop(
-    custom_agents, genes,
+    systems_biol, genes,
 )
 
-task_definitions = [ imm_resp, meta_proc, cell_cycl, cell_commu, sig_trans, apopt, devel, reprod, transp, regu_biop
+task_definitions = [
+    imm_resp, meta_proc, cell_cycl, cell_commu, sig_trans, apopt, devel, reprod, transp, regu_biop
 ]
 
 crew = Crew(
-        agents= custom_agents,
-        tasks= task_definitions,
-        verbose=True,
-        process = Process.sequential
+    agents=custom_agents,
+    tasks=task_definitions,
+    verbose=True,
+    process=Process.sequential
 )
-
-
 
 result = crew.kickoff()
 print(result)
 
-# automatically log
+# Automatically log
 sys.stdout = sys.__stdout__
 verbose_output.seek(0)
 verbose_output_content = verbose_output.read()
