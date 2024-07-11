@@ -10,28 +10,32 @@ class BiologicalAnalysisTask():
 
     def review_summary(self, agent, genes):
         return Task(
-            description = f"review, edit, and fact-check the summary that explains the gene's relationship and function to each other based on the research '{genes}'. structure the summary in an efficient way. make sure there is enough context for biologists of all backgrounds. include author and date for the information gathered",
+            description = f"review, edit, and fact-check the summary that explains the gene's relationship and function to each other based on the research '{genes}'. structure the summary in an efficient way. make sure there is 
+            enough context for biologists of all backgrounds. include author and date for the information gathered",
             agent = agent,
             expected_output = "300 words",
         )
     
     def hypothesize(self, agent, genes):
         return Task(
-            description = f"your mission is to conduct biological analysis of the '{genes}' based on the information already given to you. Create a hypothesis of these genes as a whole clade in regards to the cell cycle and other context if a gene isn't relevant to the cell cycle. Hypothesize their relationship, interaction, significance, context  within your respective fields. Give a biological mechanism for this clade.",
+            description = f"your mission is to conduct biological analysis of the '{genes}' based on the information already given to you. Create a hypothesis of these genes as a whole clade in regards to the cell cycle and other 
+            context if a gene isn't relevant to the cell cycle. Hypothesize their relationship, interaction, significance, context  within your respective fields. Give a biological mechanism for this clade.",
             agent = agent,
             expected_output = "a couple of paragraphs",
         )
     
     def info_dump(self, agent, genes):
         return Task(
-            description = f"your mission is to gather all the biological, enrichment, context dependent information on the '{genes}' that can be found. Give the author, date, and other references for where the information is given. Even if there is no information on the gene, keep exploring and note the limited information.",
+            description = f"your mission is to gather all the biological, enrichment, context dependent information on the '{genes}' that can be found. Give the author, date, and other references for where the information is given. 
+            Even if there is no information on the gene, keep exploring and note the limited information.",
             agent = agent,
             expected_output = "1000 words",
         )
     
     def compare_findings(self, agent):
         return Task(
-            description = f"Your mission is to analyze and compare the conclusions drawn by each of the 10 biological agents that previously analyzed the clade of genes. Based on their analysis of the genetic data give a percentage of how similar each hypothesis is and rank each of the agents. In the analysis focus including the style and manner in which the information is presented by each agent.",
+            description = f"Your mission is to analyze and compare the conclusions drawn by each of the 10 biological agents that previously analyzed the clade of genes. Based on their analysis of the genetic data give a percentage 
+            of how similar each hypothesis is and rank each of the agents. In the analysis focus including the style and manner in which the information is presented by each agent.",
             agent = agent,
             expected_output = "a couple of paragraphs",
         )
