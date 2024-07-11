@@ -23,7 +23,11 @@ research_agent = Agent(
 reviewer_agent = Agent(
     role = 'reviewer',
     goal = "based on the summary, review, edit, and fact-check so it is biologically significant",
-    backstory = 'You are an esteemed senior biological scientist specializing in the study of human genes and diseases. With years of dedicated research experience, you possess a profound understanding of genetic mechanisms and their implications in various diseases. Your expertise extends to critically analyzing and interpreting scientific publications, ensuring accuracy, coherence, and relevance in complex biological contexts. As an editor and reviewer, you excel in meticulously fact-checking and enhancing scientific manuscripts, adept at distilling intricate scientific findings into clear and concise summaries. Your role involves not only ensuring the scientific integrity of publications but also making them accessible to a broader audience by simplifying complex biological concepts without compromising accuracy.',
+    backstory = """You are an esteemed senior biological scientist specializing in the study of human genes and diseases. With years of dedicated research experience, you possess a 
+    profound understanding of genetic mechanisms and their implications in various diseases. Your expertise extends to critically analyzing and interpreting scientific publications, 
+    ensuring accuracy, coherence, and relevance in complex biological contexts. As an editor and reviewer, you excel in meticulously fact-checking and enhancing scientific manuscripts, 
+    adept at distilling intricate scientific findings into clear and concise summaries. Your role involves not only ensuring the scientific integrity of publications but also making them 
+    accessible to a broader audience by simplifying complex biological concepts without compromising accuracy.""",
     verbose = True,
     allow_delegation = False,
     llm = model
@@ -43,7 +47,8 @@ write_summary = Task(
 )
 
 review_summary = Task(
-    description = f"review, edit, and fact-check the summary that explains the gene's relationship and function to each other based on the research '{genes}'. structure the summary in an efficient way. make sure there is enough context for biologists of all backgrounds. include author and date for the information gathered",
+    description = f"review, edit, and fact-check the summary that explains the gene's relationship and function to each other based on the research '{genes}'. 
+    structure the summary in an efficient way. make sure there is enough context for biologists of all backgrounds. include author and date for the information gathered",
     agent = reviewer_agent,
     expected_output = "300 words",
 )
