@@ -12,18 +12,15 @@ from Source_Code.tasks import BiologicalAnalysisTask
 agents = BiologicalAgents()
 tasks = BiologicalAnalysisTask()
 
-
-print("## Welcome to the Biology Crew")
-print('-------------------------------')
-
-
-
 genes = input("Insert the genes to be analyzed as a list?\n")
 
 term = input("What is the the biological term you want it to specifically analyze as?\n")
 
 verbose_output = StringIO()
 sys.stdout = verbose_output
+
+print("## Welcome to the Biology Crew")
+print('-------------------------------')
 
 # Define your custom agents and tasks here
 cell_bio_agent = agents.cellular_biologist()
