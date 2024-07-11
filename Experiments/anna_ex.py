@@ -21,114 +21,110 @@ print('-------------------------------')
 genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
 
 # Define your custom agents and tasks here
-custom_agent_1 = agents.cellular_biologist()
-custom_agent_2 = agents.computational_biologist()
-custom_agent_3 = agents.cell_cyc()
-custom_agent_4 = agents.drug_dev()
-custom_agent_5 = agents.epigenetics_biologist()
-custom_agent_6 = agents.genereg_expert()
-custom_agent_7 = agents.molecular_biologist()
-custom_agent_8 = agents.onco_res()
-custom_agent_9 = agents.oncologist_physician()
-custom_agent_10 = agents.systems_biologist()
+cell_bio_agent = agents.cellular_biologist()
+comp_bio_agent = agents.computational_biologist()
+cell_cyc_agent = agents.cell_cyc()
+drug_dev_agent = agents.drug_dev()
+epig_bio_agent = agents.epigenetics_biologist()
+gene_reg_agent = agents.genereg_expert()
+molec_bio_agent = agents.molecular_biologist()
+onco_res_agent = agents.onco_res()
+onco_phy_agent = agents.oncologist_physician()
+sys_bio_agent = agents.systems_biologist()
 
-custom_agent_11 = agents.compare_agent()
+analytical_agent = agents.compare_agent()
 
-# custom_agent_12 = agents.molgen_writer()
 
 
 
 # Custom tasks include agent name and variables as input
 
 # get information of genes first 
-custom_task_1 = tasks.info_dump(
-    custom_agent_1, genes,
+cell_bio_info_task = tasks.info_dump(
+    cell_bio_agent, genes,
 )
-custom_task_2 = tasks.info_dump(
-    custom_agent_2, genes,
+comp_bio_info_task = tasks.info_dump(
+    comp_bio_agent, genes,
 )
-custom_task_3 = tasks.info_dump(
-    custom_agent_3, genes,
+cell_cyc_info_task = tasks.info_dump(
+    cell_cyc_agent, genes,
 )
-custom_task_4 = tasks.info_dump(
-    custom_agent_4, genes,
+drug_dev_info_task = tasks.info_dump(
+    drug_dev_agent, genes,
 )
-custom_task_5 = tasks.info_dump(
-    custom_agent_5, genes,
+epig_bio_info_task = tasks.info_dump(
+    epig_bio_agent, genes,
 )
-custom_task_6 = tasks.info_dump(
-    custom_agent_6, genes,
+gene_reg_info_task = tasks.info_dump(
+    gene_reg_agent, genes,
 )
-custom_task_7 = tasks.info_dump(
-    custom_agent_7, genes,
+molec_bio_info_task = tasks.info_dump(
+    molec_bio_agent, genes,
 )
-custom_task_8 = tasks.info_dump(
-    custom_agent_8, genes,
+onco_res_info_task = tasks.info_dump(
+    onco_res_agent, genes,
 )
-custom_task_9 = tasks.info_dump(
-    custom_agent_9, genes,
+onco_phys_info_task = tasks.info_dump(
+    onco_phy_agent, genes,
 )
-custom_task_10 = tasks.info_dump(
-    custom_agent_10, genes,
+sys_bio_info_task = tasks.info_dump(
+    sys_bio_agent, genes,
 )
 
 # hypothesize 
 
-custom_task_11 = tasks.hypothesize(
-    custom_agent_1, genes,
+cell_bio_hyp_task = tasks.hypothesize(
+    cell_bio_agent, genes,
 )
-custom_task_12 = tasks.hypothesize(
-    custom_agent_2, genes,
+comp_bio_hyp_task = tasks.hypothesize(
+    comp_bio_agent, genes,
 )
-custom_task_13 = tasks.hypothesize(
-    custom_agent_3, genes,
+cell_cyc_hyp_task = tasks.hypothesize(
+    cell_cyc_agent, genes,
 )
-custom_task_14 = tasks.hypothesize(
-    custom_agent_4, genes,
+drug_dev_hyp_task = tasks.hypothesize(
+    drug_dev_agent, genes,
 )
-custom_task_15 = tasks.hypothesize(
-    custom_agent_5, genes,
+epig_bio_hyp_task = tasks.hypothesize(
+    epig_bio_agent, genes,
 )
-custom_task_16 = tasks.hypothesize(
-    custom_agent_6, genes,
+gene_reg_hyp_task = tasks.hypothesize(
+    gene_reg_agent, genes,
 )
-custom_task_17 = tasks.hypothesize(
-    custom_agent_7, genes,
+molec_bio_hyp_task = tasks.hypothesize(
+    molec_bio_agent, genes,
 )
-custom_task_18 = tasks.hypothesize(
-    custom_agent_8, genes,
+onco_res_hyp_task = tasks.hypothesize(
+    onco_res_agent, genes,
 )
-custom_task_19 = tasks.hypothesize(
-    custom_agent_9, genes,
+onco_phy_hyp_task = tasks.hypothesize(
+    onco_phy_agent, genes,
 )
-custom_task_20 = tasks.hypothesize(
-    custom_agent_10, genes,
+sys_bio_hyp_task = tasks.hypothesize(
+    sys_bio_agent, genes,
 )
 
 
 # compare agents 
 
-custom_task_21 = tasks.compare_findings(
-    custom_agent_11,
+ana_comp_task = tasks.compare_findings(
+    analytical_agent,
 )
 
 # summary
-# custom_task_22 = tasks.summary(
-#     custom_agent_12, genes,
-# )
 
 
 
 # Define your custom crew here
 crew = Crew(
         agents=[
-            custom_agent_1, custom_agent_2, custom_agent_3,custom_agent_3,custom_agent_5,custom_agent_6,custom_agent_7,custom_agent_8,
-            custom_agent_9,custom_agent_10, custom_agent_11, 
+            cell_bio_agent, comp_bio_agent, cell_cyc_agent, drug_dev_agent, epig_bio_agent, gene_reg_agent, molec_bio_agent, onco_res_agent,
+            onco_phy_agent, sys_bio_agent, analytical_agent, 
             ],
         tasks=[
-            custom_task_1, custom_task_11,custom_task_2,custom_task_12,custom_task_3,custom_task_13, custom_task_4,custom_task_14,custom_task_5,
-            custom_task_15,custom_task_6, custom_task_16,custom_task_7,custom_task_17,custom_task_8,custom_task_18, custom_task_9,custom_task_19,custom_task_10,
-            custom_task_20, custom_task_21
+            cell_bio_info_task, cell_bio_hyp_task, comp_bio_info_task, comp_bio_hyp_task, cell_cyc_info_task, cell_cyc_hyp_task, drug_dev_info_task, drug_dev_hyp_task, epig_bio_info_task,
+            epig_bio_hyp_task, gene_reg_info_task, gene_reg_hyp_task, molec_bio_info_task, molec_bio_hyp_task, onco_res_info_task, onco_res_hyp_task, onco_phys_info_task, onco_phy_hyp_task, sys_bio_info_task,
+            sys_bio_hyp_task, ana_comp_task
             ],
         verbose=True,
         process = Process.sequential
