@@ -15,6 +15,12 @@ tasks = BiologicalAnalysisTask()
 # genes = input("Insert the genes to be analyzed as a list?\n")
 # term = input("What is the the biological term you want it to specifically analyze as?\n")
 
+verbose_output = StringIO()
+sys.stdout = verbose_output
+
+print("## Welcome to the Biology Crew")
+print('-------------------------------')
+
 genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
 
 term = {
@@ -29,13 +35,6 @@ term = {
     "Transport": "Transport",
     "Regulation of biological processes": "Regulation of biological processes"
 }
-
-
-verbose_output = StringIO()
-sys.stdout = verbose_output
-
-print("## Welcome to the Biology Crew")
-print('-------------------------------')
 
 # Define your custom agents and tasks here
 # cell_bio_agent = agents.cellular_biologist()
@@ -82,6 +81,8 @@ print('-------------------------------')
 #     sys_bio_agent, genes, term
 # )
 
+analytical_agent = agents.compare_agent()
+manager = agents.manager()
 
 agent_names = [
     "cellular_biologist", "computational_biologist", "cell_cyc", "drug_dev",
@@ -91,7 +92,6 @@ agent_names = [
 
 
 agents_list = [agents.__getattribute__(name)() for name in agent_names]
-analytical_agent = agents.compare_agent()
 
 # Define your tasks here
 tasks_list = []
@@ -122,7 +122,8 @@ crew = Crew(
     agents=agents_list + [analytical_agent],
     tasks=tasks_list + [compare_task],
     verbose=True,
-    process=Process.sequential
+    manager_agent=None,
+    process=Process.hierarchical
 )
 
 

@@ -199,4 +199,14 @@ class BiologicalAgents():
             llm= model
         )
 
-
+# MANAGER AGENT
+    def manager(self):
+        return Agent(
+            role="Project Manager",
+            goal="Efficiently manage the crew and ensure high-quality task completion",
+            backstory="""You're an experienced project manager, skilled in overseeing complex projects and guiding teams to success. Your role is to coordinate the efforts of the crew members, ensuring that each task is completed 
+            on time and to the highest standard.""",
+            verbose=True,
+            allow_delegation=True,
+            llm= model
+        )
