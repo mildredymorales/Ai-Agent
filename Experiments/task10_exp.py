@@ -36,34 +36,34 @@ custom_agents = [
 
 # Define your custom tasks here
 imm_resp = tasks10.immune_response(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 meta_proc = tasks10.metabolic_process(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 cell_cycl = tasks10.cell_cycle(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 cell_commu = tasks10.cell_comm(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 sig_trans = tasks10.signal_trans(
-   custom_agents, genes,
+   cell_biol, genes,
 )
 apopt = tasks10.apop(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 devel = tasks10.develop(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 reprod = tasks10.repro(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 transp = tasks10.transport(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 regu_biop = tasks10.reg_biop(
-    custom_agents, genes,
+    cell_biol, genes,
 )
 
 task_definitions = [
