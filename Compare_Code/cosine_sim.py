@@ -45,7 +45,7 @@ def preprocess_text(text):
 
 
 # Read all responses from file, each new line is a response
-responses = read_responses('data.txt' )
+responses = read_responses('data.txt')
 # Preprocess all responses
 processed_responses = [preprocess_text(response) for response in responses]
 
