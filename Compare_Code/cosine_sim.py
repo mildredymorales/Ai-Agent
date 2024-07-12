@@ -1,6 +1,6 @@
 """
-There are two codes in this file, the first one that is commented out is a simpler approach and takes in just strings. 
-the second approach can take it a whole doc and has more deligent preprocessing and computation, but i need to fix it since it only does csv currently.
+There are two codes in this file, the first one is a simpler approach.
+the second approach has more deligent preprocessing and computation, but i need to fix it since it only does csv currently.
 the data file incudes each of the agents responses from the last run using all of the terms
 """
 
