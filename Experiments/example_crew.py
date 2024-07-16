@@ -58,7 +58,8 @@ crew = Crew(
     agents = [research_agent, reviewer_agent],
     tasks = [read_genes, write_summary, review_summary],
     verbose = 0,
-    process = Process.sequential
+    process = Process.sequential, 
+    output_log_file=True,
 )
  
 output = crew.kickoff()
