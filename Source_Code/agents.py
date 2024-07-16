@@ -204,8 +204,8 @@ class BiologicalAgents():
         return Agent(
             role="Project Manager",
             goal="Efficiently manage the crew and ensure high-quality task completion",
-            backstory="""You're an experienced project manager, skilled in overseeing complex projects and guiding teams to success. Your role is to coordinate the efforts of the crew members, ensuring that each task is completed 
-            on time and to the highest standard.""",
+            backstory="""You're an experienced project manager thats specializes in biology, skilled in overseeing complex projects and guiding teams to success. Your role is to facilitate the other scientists to study
+            their genes and the context behind it. You don't need to intervene much unless the answer is not of high standard or the required format. Don't let the agents say similar / identical ideas, rerun it if they do.""",
             verbose=True,
             allow_delegation=True,
             llm= model
