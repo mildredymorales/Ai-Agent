@@ -12,9 +12,6 @@ from Source_Code.tasks import BiologicalAnalysisTask
 agents = BiologicalAgents()
 tasks = BiologicalAnalysisTask()
 
-verbose_output = StringIO()
-sys.stdout = verbose_output
-
 print("## Welcome to the Biology Crew")
 print('-------------------------------')
 
@@ -127,18 +124,11 @@ crew = Crew(
             sys_bio_hyp_task, ana_comp_task
             ],
         verbose=True,
-        process = Process.sequential
+        process = Process.sequential,
+        output_log_file=True,
 )
 
 
 
 result = crew.kickoff()
 print(result)
-
-# automatically log
-sys.stdout = sys.__stdout__
-verbose_output.seek(0)
-verbose_output_content = verbose_output.read()
-print(verbose_output_content)
-with open('clade2log.txt', 'a') as verbose_file:
-    verbose_file.write(verbose_output_content)
