@@ -17,6 +17,7 @@ import re
 nltk.download('punkt')
 nltk.download('stopwords')
 
+
 # Sample documents
 # doc1 = "Natural language processing is a field of computer science."
 # doc2 = "Computer science deals with artificial intelligence."
@@ -24,6 +25,15 @@ nltk.download('stopwords')
 def read_responses(filename):
     with open(filename, 'r', encoding='utf-8') as file:
         responses = file.readlines()
+    
+    # sep docs from whole output file, not needed if we input a diff way
+    # Split content by "## Welcome to the Biology Crew"
+    # responses_raw = re.split(r'## Welcome to the Biology Crew', responses)
+    # # Initialize list to store individual responses
+    # responses = []
+    # for response_raw in responses_raw:
+    #     responses = re.split(r'Final Answer:', response_raw, flags=re.IGNORECASE)
+
     return responses
 
 # Text preprocessing function
