@@ -98,12 +98,12 @@ tasks_list = []
 for agent in agents_list:
     tasks_list.append(tasks.term(agent, genes, term))
 
-compare_task = tasks.compare_findings(analytical_agent)
+# compare_task = tasks.compare_findings(analytical_agent)
 
 
-compare_task = tasks.compare_findings(
-    analytical_agent
-)
+# compare_task = tasks.compare_findings(
+#     analytical_agent
+# )
 
 # Define your custom crew here
 # crew = Crew(
@@ -120,9 +120,9 @@ compare_task = tasks.compare_findings(
 
 crew = Crew(
     agents=agents_list + [analytical_agent],
-    tasks=tasks_list + [compare_task],
+    tasks=tasks_list,
     verbose=True,
-    manager_agent=None,
+    manager_agent=manager,
     process=Process.hierarchical
 )
 

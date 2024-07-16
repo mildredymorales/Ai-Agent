@@ -78,5 +78,5 @@ cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
 print("Cosine Similarities:")
 for i in range(num_responses):
     for j in range(i + 1, num_responses):
-        print(f"Response {i+1} vs Response {j+1}: {cosine_similarities[i][j]}")
+        print(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}")
 # print("Cosine Similarity:", cosine_sim[0][0])
