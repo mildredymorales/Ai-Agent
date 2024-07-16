@@ -12,24 +12,21 @@ from Source_Code.tasks import BiologicalAnalysisTask
 agents = BiologicalAgents()
 tasks = BiologicalAnalysisTask()
 
-# genes = input("Insert the genes to be analyzed as a list?\n")
-term = input("What is the the biological term you want it to specifically analyze as? Enter the list with double quotes separated by commas. \n")
+genes = input("Insert the genes to be analyzed as a list?\n")
+term = input("What are the the biological terms you want it to specifically analyze as? Enter the list with double quotes separated by commas. \n")
 
 biological_terms = [term.strip() for term in term.split(',')]
 # converting list into a dictionary 
-term = {item: item for item in biological_terms}
-
+term = {f"term {i+1}": term for i, term in enumerate(biological_terms)}
 
 # Printing the resulting dictionary
-print(term)
+# print(term)
 
-# verbose_output = StringIO()
-# sys.stdout = verbose_output
 
 print("## Welcome to the Biology Crew")
 print('-------------------------------')
 
-genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
+# genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
 
 # term = {
 #     "Immune response": "Immune response",
@@ -132,6 +129,8 @@ crew = Crew(
     agents=agents_list + [analytical_agent],
     tasks=tasks_list,
     verbose=True,
+    output_log_file='/Users/mildredmorales-paredes/Ai-Agent/Results/log.txt', # or could just say true 
+    # memory=True,
     # manager_agent=manager,
     # process=Process.hierarchical
 )
@@ -140,12 +139,12 @@ crew = Crew(
 result = crew.kickoff()
 print(result)
 
-results_dir = '/Users/mildredmorales-paredes/Ai-Agent/Results/term.txt'
 
-# automatically log
-# sys.stdout = sys.__stdout__
-# verbose_output.seek(0)
-# verbose_output_content = verbose_output.read()
-# print(verbose_output_content)
-# with open(results_dir, 'a') as verbose_file:
-#     verbose_file.write(verbose_output_content)
+# Accessing the task output
+# task_output = tasks_list[1].output
+
+# print(f"Task Description: {task_output.description}")
+# print(f"Task Summary: {task_output.summary}")
+# print(f"Raw Output: {task_output.raw}")
+
+    
