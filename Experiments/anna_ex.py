@@ -13,28 +13,38 @@ agents = BiologicalAgents()
 tasks = BiologicalAnalysisTask()
 
 # genes = input("Insert the genes to be analyzed as a list?\n")
-# term = input("What is the the biological term you want it to specifically analyze as?\n")
+term = input("What is the the biological term you want it to specifically analyze as? Enter the list with double quotes separated by commas. \n")
 
-verbose_output = StringIO()
-sys.stdout = verbose_output
+biological_terms = [term.strip() for term in term.split(',')]
+# converting list into a dictionary 
+term = {item: item for item in biological_terms}
+
+
+# Printing the resulting dictionary
+print(term)
+
+# verbose_output = StringIO()
+# sys.stdout = verbose_output
 
 print("## Welcome to the Biology Crew")
 print('-------------------------------')
 
 genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
 
-term = {
-    "Immune response": "Immune response",
-    "Metabolic process": "Metabolic process",
-    "Cell cycle": "Cell cycle",
-    "Cell communication": "Cell communication",
-    "Signal transduction": "Signal transduction",
-    "Apoptosis": "Apoptosis",
-    "Development": "Development",
-    "Reproduction": "Reproduction",
-    "Transport": "Transport",
-    "Regulation of biological processes": "Regulation of biological processes"
-}
+# term = {
+#     "Immune response": "Immune response",
+#     "Metabolic process": "Metabolic process",
+#     "Cell cycle": "Cell cycle",
+#     "Cell communication": "Cell communication",
+#     "Signal transduction": "Signal transduction",
+#     "Apoptosis": "Apoptosis",
+#     "Development": "Development",
+#     "Reproduction": "Reproduction",
+#     "Transport": "Transport",
+#     "Regulation of biological processes": "Regulation of biological processes"
+# }
+
+
 
 # Define your custom agents and tasks here
 # cell_bio_agent = agents.cellular_biologist()
@@ -122,8 +132,8 @@ crew = Crew(
     agents=agents_list + [analytical_agent],
     tasks=tasks_list,
     verbose=True,
-    manager_agent=manager,
-    process=Process.hierarchical
+    # manager_agent=manager,
+    # process=Process.hierarchical
 )
 
 
@@ -133,9 +143,9 @@ print(result)
 results_dir = '/Users/mildredmorales-paredes/Ai-Agent/Results/term.txt'
 
 # automatically log
-sys.stdout = sys.__stdout__
-verbose_output.seek(0)
-verbose_output_content = verbose_output.read()
-print(verbose_output_content)
-with open(results_dir, 'a') as verbose_file:
-    verbose_file.write(verbose_output_content)
+# sys.stdout = sys.__stdout__
+# verbose_output.seek(0)
+# verbose_output_content = verbose_output.read()
+# print(verbose_output_content)
+# with open(results_dir, 'a') as verbose_file:
+#     verbose_file.write(verbose_output_content)
