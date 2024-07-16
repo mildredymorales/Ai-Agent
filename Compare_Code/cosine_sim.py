@@ -32,7 +32,7 @@ def read_responses(filename):
     # # Initialize list to store individual responses
     # responses = []
     # for response_raw in responses_raw:
-    #     responses = re.split(r'Final Answer:', response_raw, flags=re.IGNORECASE)
+    #     responses = re.split(r'Task output:', response_raw, flags=re.IGNORECASE)
 
     return responses
 
