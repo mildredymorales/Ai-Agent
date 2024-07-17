@@ -9,7 +9,7 @@ class BiologicalAnalysisTask():
             agent = agent,
             expected_output = "a couple of paragraphs",
         )
-    def immune_response(self, agent, genes, term):
+    def immune_response(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
             "your task is to conduct a comprehensive biological analysis based on your expertise.
