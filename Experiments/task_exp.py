@@ -42,52 +42,6 @@ print('-------------------------------')
 # }
 
 
-
-# Define your custom agents and tasks here
-# cell_bio_agent = agents.cellular_biologist()
-# comp_bio_agent = agents.computational_biologist()
-# cell_cyc_agent = agents.cell_cyc()
-# drug_dev_agent = agents.drug_dev()
-# epig_bio_agent = agents.epigenetics_biologist()
-# gene_reg_agent = agents.genereg_expert()
-# molec_bio_agent = agents.molecular_biologist()
-# onco_res_agent = agents.onco_res()
-# onco_phy_agent = agents.oncologist_physician()
-# sys_bio_agent = agents.systems_biologist()
-
-# analytical_agent = agents.compare_agent()
-
-# cell_bio_task = tasks.term(
-#     cell_bio_agent, genes, 
-# )
-# comp_bio_task = tasks.term(
-#     comp_bio_agent, genes,
-# )
-# cell_cyc_task = tasks.term(
-#     cell_cyc_agent, genes, 
-# )
-# drug_dev_task = tasks.term(
-#     drug_dev_agent, genes, 
-# )
-# epig_bio_task = tasks.term(
-#     epig_bio_agent, genes, 
-# )
-# gene_reg_task = tasks.term(
-#     gene_reg_agent, genes, 
-# )
-# mol_bio_task = tasks.term(
-#     molec_bio_agent, genes, 
-# )
-# onco_res_task = tasks.term(
-#     onco_res_agent, genes,
-# )
-# onco_phy_task = tasks.term(
-#     onco_phy_agent, genes, 
-# )
-# sys_bio_task = tasks.term(
-#     sys_bio_agent, genes, 
-# )
-
 analytical_agent = agents.compare_agent()
 manager = agents.manager()
 
