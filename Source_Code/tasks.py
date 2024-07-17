@@ -35,7 +35,9 @@ class BiologicalAnalysisTask():
             "your task is to conduct a comprehensive biological analysis based on your expertise."
             "Gather detailed information on the role of each gene in the cell cycle, 
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
-            and relevant research findings and studies that highlight their functions and interactions.""",
+            and relevant research findings and studies that highlight their functions and interactions.
+            Be original, don't take the same information given by the previous scientists.
+            Gather information on {genes} by yourself.""",
             agent = agent,
             expected_output = "500 word count of biological information based on the cell cycle information on the genes",
         )
