@@ -22,8 +22,8 @@ print("## Welcome to the Biology Crew")
 print('-------------------------------')
 
 
-agent = input("What is the the biological agent you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name.\n")
-task = input("What is the the biological terms you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name\n")
+agent_name = input("What is the the biological agent you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name.\n")
+task_name = input("What is the the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name\n")
 
 genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
 
@@ -73,25 +73,28 @@ genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP
 #     agent, genes,
 # )
 
-agent = agents.__getattribute__(agent)()
+agent = agents.__getattribute__(agent_name)()
 print(agent)
 
-task = getattr(tasks, task)(agent, genes)
+task = getattr(tasks, task_name)(agent, genes)
 
 
 
 # do 10 iterations 
 
+# the output_log_file doesn't allow other print statements only what the agent's final answer is 
+
+
 crew = Crew(
     agents=[agent],
     tasks=[task],
     verbose=True,
-    output_log_file='/Users/mildredmorales-paredes/Ai-Agent/Results/cell_cyc_task_comp_bio_agent_log.txt', # or could just say true 
+    output_log_file='/Users/mildredmorales-paredes/Ai-Agent/Results/{task_name}_task_{agent}_agent_log.txt', # or could just say true 
 )
 
-print("This log file looks at the cell cycle task done by the cellular bio agent")
+# print("This log file looks at the cell cycle task done by the cellular bio agent")
 for x in range(10):
-    print("NEW ITERATION STARTS HERE")
+    # print("NEW ITERATION STARTS HERE")
     result = crew.kickoff()
     print(result)
 
