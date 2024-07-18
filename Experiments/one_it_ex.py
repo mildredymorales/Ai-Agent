@@ -9,6 +9,8 @@ from Source_Code.tasks import BiologicalAnalysisTask
 agents = BiologicalAgents()
 tasks = BiologicalAnalysisTask()
 
+# term = input("What is the the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name\n")
+
 # Define the list of genes
 genes = """DLGAP5, DEPDC1, KIF20A, TROAP, KIF18B, KIF2C, RRM2, CDC25C, CCNB2, KIF14, CENPF, PRR11, UBE2C, 
 PIMREG, PTTG1, NEK2, HMMR, PLK1, AURKA, MND1, LGALS4, DEFB1, OASL""" # cell cycle genes
@@ -26,6 +28,7 @@ agents_list = [getattr(agents, name)() for name in agent_names]
 # Define the task
 tasks_list = []
 
+# could change the actual tasks to the term task for human input 
 # Append tasks for each agent
 for agent in agents_list:
     tasks_list.append(tasks.cell_cycle(agent, genes))
