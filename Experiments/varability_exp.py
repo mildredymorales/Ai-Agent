@@ -1,4 +1,5 @@
 import sys
+import os
 from io import StringIO
 from crewai import Crew, Process
 from langchain_community.llms import Ollama
@@ -78,19 +79,21 @@ print(agent)
 
 task = getattr(tasks, task_name)(agent, genes)
 
-
-
-# do 10 iterations 
+# log directory for full name 
+directory_path = "/Users/mildredmorales-paredes/Ai-Agent/Results"
+log_filename = f"{task_name}_task_{agent_name}_agent_log.txt"
+log_path = os.path.join(directory_path, log_filename)
 
 # the output_log_file doesn't allow other print statements only what the agent's final answer is 
-
-
 crew = Crew(
     agents=[agent],
     tasks=[task],
     verbose=True,
-    output_log_file='/Users/mildredmorales-paredes/Ai-Agent/Results/{task_name}_task_{agent}_agent_log.txt', # or could just say true 
+    output_log_file=log_path, # or could just say true 
 )
+
+
+# do 10 iterations 
 
 # print("This log file looks at the cell cycle task done by the cellular bio agent")
 for x in range(10):
