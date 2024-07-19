@@ -3,7 +3,6 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import string
 import re
 
 # Download NLTK resources (if not already downloaded)
@@ -32,7 +31,7 @@ def separate_responses(file_path, phrase):
     return responses
 
 
-file_path = 'Results/cell_comm_task_cell_cyc_agent_log.txt'
+file_path = 'Results/cell_comm/cell_comm_task_cell_cyc_agent_log.txt'
 # use phrase that appears right before start of a new response
 # think about cutting out some of the agent task description 
 phrase = 'status=completed'
@@ -41,6 +40,28 @@ responses = separate_responses(file_path, phrase)
 # Now responses is a list where each element is a separate response
 # for idx, response in enumerate(responses):
 #     print(f"Response {idx+1}:")
+#     print(response)
+#     print()
+
+# def remove_phrases(response):
+#     start_marker = 'agent='
+#     end_marker = 'status=started'
+    
+#     start_idx = response.find(start_marker)
+#     end_idx = response.find(end_marker)
+    
+#     if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
+#         # Remove header and footer
+#         cleaned_response = response[end_idx + len(end_marker):].strip()
+#     else:
+#         cleaned_response = response  # Return original response if markers are not found
+    
+#     return cleaned_response
+
+# cleaned_responses = [remove_phrases(response) for response in responses]
+# # Print processed responses
+# for idx, response in enumerate(cleaned_responses):
+#     print(f"Processed Response {idx + 1}:")
 #     print(response)
 #     print()
 
@@ -69,6 +90,7 @@ def preprocess_text(text):
 
     # Reconstruct document from processed tokens
     processed_text = ' '.join(stemmed_text)
+    # print(processed_text)
     return processed_text
 
 
