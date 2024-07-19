@@ -12,8 +12,8 @@ class BiologicalAnalysisTask():
     def immune_response(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise.
-            "Gather detailed information on the role of each gene in immune response,
+            your task is to conduct a comprehensive biological analysis based on your expertise.
+            Gather detailed information on the role of each gene in immune response,
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
@@ -22,8 +22,8 @@ class BiologicalAnalysisTask():
     def metabolic_process(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise."
-            "Gather detailed information on the role of each gene in metabolic process, how these genes interact with each other, 
+            your task is to conduct a comprehensive biological analysis based on your expertise."
+            Gather detailed information on the role of each gene in metabolic process, how these genes interact with each other, 
             the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
@@ -32,8 +32,8 @@ class BiologicalAnalysisTask():
     def cell_cycle(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise."
-            "Gather detailed information on the role of each gene in the cell cycle, 
+            your task is to conduct a comprehensive biological analysis based on your expertise."
+            Gather detailed information on the role of each gene in the cell cycle, 
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.
             Be original, don't take the same information given by the previous scientists.
@@ -45,7 +45,7 @@ class BiologicalAnalysisTask():
         return Task(
             description = f"""I will provide you with {genes}.
             "your task is to conduct a comprehensive biological analysis based on your expertise."
-            "Gather detailed information on the role of each gene in cell communication, 
+            Gather detailed information on the role of each gene in cell communication, 
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
@@ -54,8 +54,8 @@ class BiologicalAnalysisTask():
     def signal_trans(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise."
-            "Gather detailed information on the role of each gene in signal transduction, 
+            your task is to conduct a comprehensive biological analysis based on your expertise."
+            Gather detailed information on the role of each gene in signal transduction, 
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
@@ -64,8 +64,8 @@ class BiologicalAnalysisTask():
     def apop(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise.
-            "Gather detailed information on the role of each gene in apoptosis, 
+            your task is to conduct a comprehensive biological analysis based on your expertise.
+            Gather detailed information on the role of each gene in apoptosis, 
             how these genes interact with each other, the pathways or mechanisms they are involved in,
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
@@ -74,8 +74,8 @@ class BiologicalAnalysisTask():
     def develop(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise.
-            "Gather detailed information on the role of each gene in development, 
+            your task is to conduct a comprehensive biological analysis based on your expertise.
+            Gather detailed information on the role of each gene in development, 
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
@@ -84,8 +84,8 @@ class BiologicalAnalysisTask():
     def repro(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise.
-            "Gather detailed information on the role of each gene in reproduction,
+            your task is to conduct a comprehensive biological analysis based on your expertise.
+            Gather detailed information on the role of each gene in reproduction,
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
@@ -94,8 +94,8 @@ class BiologicalAnalysisTask():
     def transport(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise.
-            "Gather detailed information on the role of each gene in transport,
+            your task is to conduct a comprehensive biological analysis based on your expertise.
+            Gather detailed information on the role of each gene in transport,
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
@@ -104,8 +104,8 @@ class BiologicalAnalysisTask():
     def reg_biop(self, agent, genes):
         return Task(
             description = f"""I will provide you with {genes}.
-            "your task is to conduct a comprehensive biological analysis based on your expertise."
-            "Gather detailed information on the role of each gene in regulation of biological processes, 
+            your task is to conduct a comprehensive biological analysis based on your expertise."
+            Gather detailed information on the role of each gene in regulation of biological processes, 
             how these genes interact with each other, the pathways or mechanisms they are involved in, 
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
