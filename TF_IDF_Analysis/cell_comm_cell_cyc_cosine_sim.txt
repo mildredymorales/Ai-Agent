@@ -1,6 +1,6 @@
 Cosine Similarities:
 
-File: Results/cell_comm/cell_comm_task_cell_cyc_agent_log.txt
+File path: /Users/mildredmorales-paredes/Ai-Agent/Results/cell_comm/cell_comm_task_cell_cyc_agent_log.txt
 
 Row 1 vs Row 2: 0.5420293052499641
 Row 1 vs Row 3: 0.37977347227665414
@@ -47,3 +47,7 @@ Row 7 vs Row 10: 0.25142037585580185
 Row 8 vs Row 9: 0.4643252506531841
 Row 8 vs Row 10: 0.23071573749073854
 Row 9 vs Row 10: 0.38802816503094417
+
+Average Cosine Similarity:, 0.4358940939110385
+Maximum Cosine Similarity:, 0.6661177479674455
+Minimum Cosine Similarity:, 0.18182697048786378
