@@ -110,9 +110,13 @@ num_responses = len(processed_responses)
 cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
 # cosine_sim = cosine_similarity(tfidf_matrix[0], tfidf_matrix[1])
 
-# Print the cosine similarity
-print("Cosine Similarities:")
-for i in range(num_responses):
-    for j in range(i + 1, num_responses):
-        print(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}")
-# print("Cosine Similarity:", cosine_sim[0][0])
+output_file = "TF_IDF_Analysis/task_agent_cosine_sim.txt"
+
+with open(output_file, 'w') as f:
+    # Print the cosine similarity
+    f.write(f"Cosine Similarities:\n")
+    f.write(f"File: {file_path}\n")
+    for i in range(num_responses):
+        for j in range(i + 1, num_responses):
+            f.write(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}\n")
+    # print("Cosine Similarity:", cosine_sim[0][0])
