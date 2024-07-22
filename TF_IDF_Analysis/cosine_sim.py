@@ -32,9 +32,9 @@ def separate_responses(file_path, phrase):
     return responses
 
 
-file_path = '/Users/n4k/Ai-Agent/Results/immune_response/immune_response_task_cellular_biologist_agent_log.txt'
+file_path = '/Users/mildredmorales-paredes/Ai-Agent/Results/cell_comm/cell_comm_task_cell_cyc_agent_log.txt'
 # use phrase that appears right before start of a new response
-# think about cutting out some of the agent task description 
+# cutting out some of the agent task description 
 phrase = 'status=completed'
 responses = separate_responses(file_path, phrase)
 
@@ -110,6 +110,7 @@ tfidf_matrix = vectorizer.fit_transform(processed_responses)
 num_responses = len(processed_responses)
 cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
 # cosine_sim = cosine_similarity(tfidf_matrix[0], tfidf_matrix[1])
+
 # Extract the upper triangle of the similarity matrix (excluding the diagonal)
 upper_triangle_indices = np.triu_indices(num_responses, k=1)
 upper_triangle_similarities = cosine_similarities[upper_triangle_indices]
@@ -119,13 +120,17 @@ average_similarity = np.mean(upper_triangle_similarities)
 max_similarity = np.max(upper_triangle_similarities)
 min_similarity = np.min(upper_triangle_similarities)
 
+# write results to file
+output_file = "task_agent_cosine_sim.txt"
+with open(output_file, 'w') as f:
+        f.write("Cosine Similarities:\n")
+        f.write(f"\nFile path: {file_path}\n")
+        for i in range(num_responses):
+            for j in range(i + 1, num_responses):
+                f.write(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}\n")
+        f.write(f"\nAverage Cosine Similarity:, {average_similarity}\n")
+        f.write(f"Maximum Cosine Similarity:, {max_similarity}\n")
+        f.write(f"Minimum Cosine Similarity:, {min_similarity}")
 
-# Print the cosine similarity
-print("Cosine Similarities:")
-for i in range(num_responses):
-    for j in range(i + 1, num_responses):
-        print(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}")
-print("\nAverage Cosine Similarity:", average_similarity)
-print("Maximum Cosine Similarity:", max_similarity)
-print("Minimum Cosine Similarity:", min_similarity)
+
 # print("Cosine Similarity:", cosine_sim[0][0])
