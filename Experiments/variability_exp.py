@@ -30,55 +30,12 @@ task_name = input("What is the the biological term you want it to specifically a
 genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
 
 
-# Define your custom agents and tasks here
-# cell_bio_agent = agents.cellular_biologist()
-# comp_bio_agent = agents.computational_biologist()
-# cell_cyc_agent = agents.cell_cyc()
-# drug_dev_agent = agents.drug_dev()
-# epig_bio_agent = agents.epigenetics_biologist()
-# gene_reg_agent = agents.genereg_expert()
-# molec_bio_agent = agents.molecular_biologist()
-# onco_res_agent = agents.onco_res()
-# onco_phy_agent = agents.oncologist_physician()
-# sys_bio_agent = agents.systems_biologist()
-
-
-# cell_cyc_task = tasks.cell_cycle(
-#     agent, genes, 
-# )
-# print(cell_cyc_task)
-# cell_com_task = tasks.cell_comm(
-#     agent, genes,
-# )
-# apop_task = tasks.apop(
-#     agent, genes, 
-# )
-# dev_task = tasks.develop(
-#     agent, genes, 
-# )
-# immune_res_task = tasks.immune_response(
-#     agent, genes, 
-# )
-# meta_pro_task = tasks.metabolic_process(
-#     agent, genes,
-# )
-# reg_bio_task = tasks.reg_biop(
-#     agent, genes, 
-# )
-# repro_task = tasks.repro(
-#     agent, genes, 
-# )
-# sig_tans_task = tasks.signal_trans(
-#     agent, genes, 
-# )
-# transport_task = tasks.transport(
-#     agent, genes,
-# )
-
 agent = agents.__getattribute__(agent_name)()
-print(agent)
-
 task = getattr(tasks, task_name)(agent, genes)
+
+# this doesn't use the tool properly, never does actual math, could try call back or a diff crew one using task_out.raw
+# compare_agent = agents.data_scientist_agent()
+# compare_task = tasks.compare(compare_agent, task)
 
 # log directory for full name 
 directory_path = "/Users/mildredmorales-paredes/Ai-Agent/Results"
@@ -93,7 +50,6 @@ crew = Crew(
     output_log_file=log_path, # or could just say true 
 )
 
-
 # do 10 iterations 
 
 # print("This log file looks at the cell cycle task done by the cellular bio agent")
@@ -103,12 +59,3 @@ for x in range(10):
     print(result)
 
 
-
-# Accessing the task output
-# task_output = tasks_list[1].output
-
-# print(f"Task Description: {task_output.description}")
-# print(f"Task Summary: {task_output.summary}")
-# print(f"Raw Output: {task_output.raw}")
-
-    
