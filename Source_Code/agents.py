@@ -3,6 +3,10 @@ from Source_Code.tools import MathTools
 from langchain_community.llms import Ollama
 model = Ollama(model= 'llama3')
 
+
+# pre_process_tool = MathTools.pre_process
+# cosine_sim_tool = MathTools.cosine_sim
+
 # BIOLOGIST AGENTS
 class BiologicalAgents():
     def cellular_biologist(self):
@@ -169,7 +173,7 @@ class BiologicalAgents():
             llm= model
         )
 
-    def compare_agent(self):
+    def data_scientist_agent(self):
         return Agent(
             role="Data Scientist",
             goal="To compare how similar and different the responses are using TF-IDF",
@@ -178,5 +182,5 @@ class BiologicalAgents():
             verbose=True,
             allow_delegation=False,
             llm= model,
-            tools=[MathTools] # (result_as_answer=True)
+            # tools=[pre_process_tool, cosine_sim_tool]
         )

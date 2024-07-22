@@ -12,8 +12,11 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 class MathTools():
+
     @tool("Preprocess the responses to prepare for analysis")
-    def pre_process(file):
+    def pre_process(text):
+        """This performs the preprocessing on the agents response
+        """
         # Convert text to lowercase
         text = text.lower()
 
@@ -39,6 +42,8 @@ class MathTools():
     
     @tool("Use TF-IDF to calculate cosine similarity when comparing agents' responses")
     def cosine_sim(response):
+        """This computes cosine similarity through tf-idf
+        """
         # Step 1: Create TfidfVectorizer instance
         vectorizer = TfidfVectorizer()
 
@@ -56,3 +61,7 @@ class MathTools():
         for i in range(num_responses):
             for j in range(i + 1, num_responses):
                 return(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}")
+    
+    # def tools():
+    #     return [MathTools.pre_process, MathTools.cosine_sim]
+ 

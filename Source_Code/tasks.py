@@ -1,4 +1,7 @@
 from crewai import Task
+from Source_Code.tools import MathTools
+# pre_process_tool = MathTools.pre_process
+# cosine_sim_tool = MathTools.cosine_sim
 
 class BiologicalAnalysisTask():
     def term(self, agent, genes, term):
@@ -110,4 +113,15 @@ class BiologicalAnalysisTask():
             and relevant research findings and studies that highlight their functions and interactions.""",
             agent = agent,
             expected_output = "500 word count of biological information based on the regulation of biological processes information on the genes",
+        )
+    def compare(self, agent, task):
+        return Task(
+            description = f"""
+            your task is to conduct a comprehensive mathematical analysis using the Math Tools.
+            Compute the cosine similarity of each of the agents finals responses using tf-idf approach. Use the agents output as input for the tools""",
+            agent = agent,
+            expected_output = "mathematical values",
+            # tools=[pre_process_tool, cosine_sim_tool],
+            context = {task}
+            # or try callback
         )
