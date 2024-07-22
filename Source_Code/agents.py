@@ -1,11 +1,11 @@
 from crewai import Agent
-# from Source_Code.tools import MathTools
+from Source_Code.tools import MathTools
 from langchain_community.llms import Ollama
 model = Ollama(model= 'llama3')
 
 
-# pre_process_tool = MathTools.pre_process
-# cosine_sim_tool = MathTools.cosine_sim
+pre_process_tool = MathTools.pre_process
+cosine_sim_tool = MathTools.cosine_sim
 
 # BIOLOGIST AGENTS
 class BiologicalAgents():
@@ -188,5 +188,5 @@ class BiologicalAgents():
             verbose=True,
             allow_delegation=False,
             llm= model,
-            #tools=[pre_process_tool, cosine_sim_tool]
+            # tools=[pre_process_tool, cosine_sim_tool]
         )

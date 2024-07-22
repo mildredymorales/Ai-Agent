@@ -33,8 +33,8 @@ agent = agents.__getattribute__(agent_name)()
 task = getattr(tasks, task_name)(agent, genes)
 
 # this doesn't use the tool properly, never does actual math, could try call back or a diff crew one using task_out.raw
-# compare_agent = agents.data_scientist_agent()
-# compare_task = tasks.compare(compare_agent, task)
+compare_agent = agents.data_scientist_agent()
+compare_task = tasks.tf_idf(compare_agent, task)
 
 # log directory for full name 
 directory_path = f"/Users/mildredmorales-paredes/Ai-Agent/Results/{task_name}"
@@ -43,8 +43,8 @@ log_path = os.path.join(directory_path, log_filename)
 
 # the output_log_file doesn't allow other print statements only what the agent's final answer is 
 crew = Crew(
-    agents=[agent],
-    tasks=[task],
+    agents=[agent, compare_agent],
+    tasks=[task, compare_task],
     verbose=True,
     output_log_file=log_path, # or could just say true 
 )
@@ -52,7 +52,7 @@ crew = Crew(
 # do 10 iterations 
 
 # print("This log file looks at the cell cycle task done by the cellular bio agent")
-for x in range(10):
+for x in range(3):
     # print("NEW ITERATION STARTS HERE")
     result = crew.kickoff()
     print(result)

@@ -13,6 +13,25 @@ nltk.download('stopwords')
 
 class MathTools():
 
+    @tool("Separate all files into individual responses")
+    # phrase might not always appear for sure 
+    def separate_responses(content, phrase):
+        # Use regular expression to split based on the phrase
+        responses = re.split(r'(?<!\n)\b' + re.escape(phrase) + r'\b', content)
+
+        # The first item will be everything before the first occurrence of the phrase
+        # if the file starts with a response, otherwise it will be an empty string
+        if responses[0] == '':
+            responses = responses[1:]
+
+        # Strip leading and trailing whitespace from each response
+        responses = [response.strip() for response in responses]
+        
+        # Filter out any empty responses
+        responses = [response for response in responses if response]
+
+        return responses
+
     @tool("Preprocess the responses to prepare for analysis")
     def pre_process(text):
         """This performs the preprocessing on the agents response
