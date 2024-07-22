@@ -173,9 +173,8 @@ class BiologicalAgents():
         return Agent(
             role="Data Scientist",
             goal="To compare how similar and different the responses are using TF-IDF",
-            backstory="""You are a skilled writer and analytical thinker deeply immersed in the realm of biology. With a keen eye for detail and a passion for unraveling scientific complexities, you meticulously compare and 
-            critique diverse biological analyses. Renowned for your ability to synthesize information from various sources, you excel in uncovering similarities, differences, and innovative insights across research outputs. 
-            Your work fosters a deeper understanding of biological phenomena, contributing to the advancement of knowledge in this dynamic field.""",
+            backstory="""As a data scientist specializing in biological and mathematical computational applications, your work revolves around harnessing data to gain deeper insights into biological processes and phenomena. 
+            You apply yiur expertise in mathematics, statistics, and computational techniques to analyze complex biological data sets, such as genomic sequences, protein structures, and biomedical imaging data.""",
             verbose=True,
             allow_delegation=False,
             llm= model,
