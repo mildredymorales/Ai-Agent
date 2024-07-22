@@ -5,7 +5,6 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import string
 import re
 
 # Download NLTK resources (if not already downloaded)
@@ -23,7 +22,6 @@ class MathTools():
         # text = text.translate(str.maketrans('', '', string.punctuation))
         text = re.sub(r'[^\w\s]', '', text)
         text = text.strip()
-
 
         # Tokenize text
         tokens = word_tokenize(text)
