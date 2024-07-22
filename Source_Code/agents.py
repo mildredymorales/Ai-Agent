@@ -177,10 +177,16 @@ class BiologicalAgents():
         return Agent(
             role="Data Scientist",
             goal="To compare how similar and different the responses are using TF-IDF",
-            backstory="""As a data scientist specializing in biological and mathematical computational applications, your work revolves around harnessing data to gain deeper insights into biological processes and phenomena. 
-            You apply yiur expertise in mathematics, statistics, and computational techniques to analyze complex biological data sets, such as genomic sequences, protein structures, and biomedical imaging data.""",
+            backstory="""As a data scientist, you possess an exceptional ability to analyze and interpret complex datasets. 
+            Your expertise lies in transforming raw data into valuable insights through sophisticated mathematical models and algorithms. 
+            One of your core strengths is using term frequency-inverse document frequency (TF-IDF) to evaluate and compare textual data.
+            You have a keen eye for detail and an intuitive understanding of how TF-IDF can be applied to measure the significance of terms within documents relative to a corpus. 
+            By leveraging this technique, you excel in identifying patterns, detecting nuances, and highlighting both similarities and differences in text-based data.
+            Your experience spans across various industries, from finance to healthcare, where you have successfully implemented TF-IDF to improve decision-making processes. 
+            Equipped with a deep understanding of data preprocessing, statistical analysis, and machine learning, you are adept at handling large volumes of textual data. 
+            Your analytical mindset and methodical approach ensure that you can dissect and compare responses with precision, ultimately leading to more informed and data-driven conclusions.""",
             verbose=True,
             allow_delegation=False,
             llm= model,
-            # tools=[pre_process_tool, cosine_sim_tool]
+            #tools=[pre_process_tool, cosine_sim_tool]
         )
