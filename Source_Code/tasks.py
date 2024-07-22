@@ -1,7 +1,7 @@
 from crewai import Task
-# from Source_Code.tools import MathTools
-# pre_process_tool = MathTools.pre_process
-# cosine_sim_tool = MathTools.cosine_sim
+from Source_Code.tools import MathTools
+pre_process_tool = MathTools.pre_process
+cosine_sim_tool = MathTools.cosine_sim
 
 class BiologicalAnalysisTask():
     def term(self, agent, genes, term):
@@ -114,14 +114,14 @@ class BiologicalAnalysisTask():
             agent = agent,
             expected_output = "500 word count of biological information based on the regulation of biological processes information on the genes",
         )
-    def compare(self, agent, task):
+    def tf_idf(self, agent, task):
         return Task(
-            description = f"""
-            your task is to conduct a comprehensive mathematical analysis using the Math Tools.
-            Compute the cosine similarity of each of the agents finals responses using tf-idf approach. Use the agents output as input for the tools""",
+            description = f"""Your task is to employ TF-IDF and cosine similarity. Beginning with 
+            data preprocessing to standardize text and enhance relevance through TF-IDF weighting, you'll transform each agent response into a numerical vector. 
+            By calculating cosine similarity between these vectors, you'll measure the similarity of the responses. The input of the tools is the {task}.""",
             agent = agent,
-            expected_output = "mathematical values",
-            # tools=[pre_process_tool, cosine_sim_tool],
+            expected_output = "a list of cosine similarity values for each agent response",
+            tools=[pre_process_tool(task), cosine_sim_tool(task)],
             context = {task}
             # or try callback
         )
