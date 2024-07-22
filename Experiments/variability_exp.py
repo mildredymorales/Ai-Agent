@@ -1,6 +1,5 @@
 import sys
 import os
-from io import StringIO
 from crewai import Crew, Process
 from langchain_community.llms import Ollama
 model = Ollama(model= 'llama3')
@@ -38,7 +37,7 @@ task = getattr(tasks, task_name)(agent, genes)
 # compare_task = tasks.compare(compare_agent, task)
 
 # log directory for full name 
-directory_path = "/Users/mildredmorales-paredes/Ai-Agent/Results"
+directory_path = f"/Users/mildredmorales-paredes/Ai-Agent/Results/{task_name}"
 log_filename = f"{task_name}_task_{agent_name}_agent_log.txt"
 log_path = os.path.join(directory_path, log_filename)
 
