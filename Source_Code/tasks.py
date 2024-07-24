@@ -118,10 +118,10 @@ class BiologicalAnalysisTask():
         return Task(
             description = f"""Your task is to employ TF-IDF and cosine similarity. Beginning with 
             data preprocessing to standardize text and enhance relevance through TF-IDF weighting, you'll transform each agent response into a numerical vector. 
-            By calculating cosine similarity between these vectors, you'll measure the similarity of the responses. The input of the tools is the {task}.""",
+            By calculating cosine similarity between these vectors, you'll measure the similarity of the responses. Use the tools to make this calculation. The input of the tools is the {task}.""",
             agent = agent,
             expected_output = "a list of cosine similarity values for each agent response",
-            tools=[pre_process_tool(task), cosine_sim_tool(task)],
-            context = {task}
+            # # tools=[cosine_sim_tool],
+            # context = {task}
             # or try callback
         )

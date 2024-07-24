@@ -8,14 +8,21 @@ from sklearn.metrics.pairwise import cosine_similarity
 import re
 
 # Download NLTK resources (if not already downloaded)
-nltk.download('punkt')
-nltk.download('stopwords')
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
 
 class MathTools():
+    def my_simple_tool(question: str) -> str:
+        """Tool description for clarity."""
+        answer = question
+        return answer
 
     @tool("Separate all files into individual responses")
     # phrase might not always appear for sure 
     def separate_responses(content, phrase):
+        """this reads all the agents' responses and is able
+        to separate them for calculations
+        """
         # Use regular expression to split based on the phrase
         responses = re.split(r'(?<!\n)\b' + re.escape(phrase) + r'\b', content)
 
@@ -80,6 +87,16 @@ class MathTools():
         for i in range(num_responses):
             for j in range(i + 1, num_responses):
                 return(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}")
+            
+    # @tool("this is the call back mechanism")
+    # def callback_function(output):
+    #     """this is the callback mechanism to start the tf-idf
+    #     """
+    #     # text = MathTools.separate_responses(output, phrase)
+    #     response = MathTools.pre_process(output)
+    #     values = MathTools.cosine_sim(response)
+    #     return values 
+       
     
     # def tools():
     #     return [MathTools.pre_process, MathTools.cosine_sim]

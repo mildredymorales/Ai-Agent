@@ -184,9 +184,10 @@ class BiologicalAgents():
             By leveraging this technique, you excel in identifying patterns, detecting nuances, and highlighting both similarities and differences in text-based data.
             Your experience spans across various industries, from finance to healthcare, where you have successfully implemented TF-IDF to improve decision-making processes. 
             Equipped with a deep understanding of data preprocessing, statistical analysis, and machine learning, you are adept at handling large volumes of textual data. 
-            Your analytical mindset and methodical approach ensure that you can dissect and compare responses with precision, ultimately leading to more informed and data-driven conclusions.""",
+            Your analytical mindset and methodical approach ensure that you can dissect and compare responses with precision, ultimately leading to more informed and data-driven conclusions. 
+            You are an experienced tool user, use the tools to create this calculation.""",
             verbose=True,
             allow_delegation=False,
             llm= model,
-            # tools=[pre_process_tool, cosine_sim_tool]
+            # tools=[cosine_sim_tool]
         )
