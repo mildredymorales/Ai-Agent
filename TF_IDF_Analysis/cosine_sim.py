@@ -32,7 +32,7 @@ def separate_responses(file_path, phrase):
     return responses
 
 
-file_path = '/Users/mildredmorales-paredes/Ai-Agent/Results/cell_comm/cell_comm_task_cell_cyc_agent_log.txt'
+file_path = input("please input your file's path")
 # use phrase that appears right before start of a new response
 # cutting out some of the agent task description 
 phrase = 'status=completed'
@@ -121,7 +121,7 @@ max_similarity = np.max(upper_triangle_similarities)
 min_similarity = np.min(upper_triangle_similarities)
 
 # write results to file
-output_file = "task_agent_cosine_sim.txt"
+output_file = input("input output file name as txt")
 with open(output_file, 'w') as f:
         f.write("Cosine Similarities:\n")
         f.write(f"\nFile path: {file_path}\n")
