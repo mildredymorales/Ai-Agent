@@ -12,19 +12,14 @@ nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 
 class MathTools():
-    def my_simple_tool(question: str) -> str:
-        """Tool description for clarity."""
-        answer = question
-        return answer
-
     @tool("Separate all files into individual responses")
     # phrase might not always appear for sure 
-    def separate_responses(content, phrase):
+    def separate_responses(text: str, phrase: str) -> str:
         """this reads all the agents' responses and is able
         to separate them for calculations
         """
         # Use regular expression to split based on the phrase
-        responses = re.split(r'(?<!\n)\b' + re.escape(phrase) + r'\b', content)
+        responses = re.split(r'(?<!\n)\b' + re.escape(phrase) + r'\b', text)
 
         # The first item will be everything before the first occurrence of the phrase
         # if the file starts with a response, otherwise it will be an empty string
@@ -39,9 +34,9 @@ class MathTools():
 
         return responses
 
-    @tool("Preprocess the responses to prepare for analysis")
-    def pre_process(text):
-        """This performs the preprocessing on the agents response
+    @tool("Preprocess Agents text")
+    def pre_process(text: str) ->str:
+        """This tool will clean and preprocess the text by structuring it for data analysis 
         """
         # Convert text to lowercase
         text = text.lower()
@@ -67,23 +62,20 @@ class MathTools():
         return processed_text
     
     @tool("Use TF-IDF to calculate cosine similarity when comparing agents' responses")
-    def cosine_sim(response):
+    def cosine_sim(text: str) -> float:
         """This computes cosine similarity through tf-idf
         """
         # Step 1: Create TfidfVectorizer instance
         vectorizer = TfidfVectorizer()
 
         # Step 2: Fit and transform the vectorizer on the processed documents
-        tfidf_matrix = vectorizer.fit_transform(response)
-        # tfidf_matrix = vectorizer.fit_transform([processed_doc1, processed_doc2])
+        tfidf_matrix = vectorizer.fit_transform(text)
 
         # Step 3: Calculate cosine similarity
-        num_responses = len(response)
+        num_responses = len(text)
         cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
-        # cosine_sim = cosine_similarity(tfidf_matrix[0], tfidf_matrix[1])
 
-        # Print the cosine similarity
-        print("Cosine Similarities:")
+        # print("Cosine Similarities:")
         for i in range(num_responses):
             for j in range(i + 1, num_responses):
                 return(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}")
