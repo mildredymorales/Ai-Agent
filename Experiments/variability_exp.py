@@ -55,7 +55,7 @@ crew = Crew(
 # do 10 iterations 
 
 # print("This log file looks at the cell cycle task done by the cellular bio agent")
-for x in range(7):
+for x in range(10):
     # print("NEW ITERATION STARTS HERE")
     result = crew.kickoff()
     print(result)
