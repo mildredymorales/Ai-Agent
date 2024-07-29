@@ -25,10 +25,10 @@ bad_task = Task(
 
 good_task = Task(
     description = f"""The objective of this task is to conduct a comprehensive analysis of a specified '{genes}' to elucidate its biological significance and identify potential 
-    relationships within the context of a given biological framework. Perform functional enrichment analyses to interpret the biological roles of the identified DEGs. 
+    relationships within the context of a given biological framework. Perform functional enrichment analyses to interpret the biological roles of the genes. 
     This includes Gene Ontology (GO) enrichment to ascertain which biological processes, molecular functions, and cellular components are overrepresented. Additionally, 
     conduct pathway analysis using databases like KEGG or Reactome to map the DEGs to known biological pathways, thereby elucidating their potential roles in specific 
-    biological processes or diseases. Integrate these findings to explore the relationships between the genes, looking at how they interact within the pathways and processes identified.
+    biological processes or diseases. Inteigrate these findngs to explore the relationships between the genes, looking at how they interact within the pathways and processes identified.
     The final deliverable should provide a thorough understanding of the gene set's biological relevance and its implications for further research or clinical applications.""",
     agent = research_agent,
     expected_output = "a report with multiple pages",
