@@ -53,60 +53,60 @@ def preprocess_text(text):
 
     return processed_text
 
-# Function to calculate cosine similarities and write results to file
-def calculate_cosine_similarity(file_paths, phrase, output_file):
-    # Initialize a list to hold processed responses from all files
-    all_processed_responses = []
+# Function to calculate cosine similarities and write results to file for all responses in all subfolders
+def calculate_cosine_similarity(parent_folder_path, phrase, output_file):
+    all_responses = []
 
-    # Process each file
-    for file_path in file_paths:
-        responses = separate_responses(file_path, phrase)
-        processed_responses = [preprocess_text(response) for response in responses]
-        all_processed_responses.extend(processed_responses)
+    # Walk through all subfolders and files
+    for root, dirs, files in os.walk(parent_folder_path):
+        for file_name in files:
+            if file_name.endswith('.txt'):
+                file_path = os.path.join(root, file_name)
 
-    # Step 1: Create TfidfVectorizer instance
-    vectorizer = TfidfVectorizer()
+                # Process responses from the current file
+                responses = separate_responses(file_path, phrase)
+                processed_responses = [preprocess_text(response) for response in responses]
+                all_responses.extend(processed_responses)
 
-    # Step 2: Fit and transform the vectorizer on the processed documents
-    tfidf_matrix = vectorizer.fit_transform(all_processed_responses)
+    # Proceed if there are any processed responses
+    if all_responses:
+        # Step 1: Create TfidfVectorizer instance
+        vectorizer = TfidfVectorizer()
 
-    # Step 3: Calculate cosine similarity
-    num_responses = len(all_processed_responses)
-    cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
+        # Step 2: Fit and transform the vectorizer on the combined documents
+        tfidf_matrix = vectorizer.fit_transform(all_responses)
 
-    # Extract the upper triangle of the similarity matrix (excluding the diagonal)
-    upper_triangle_indices = np.triu_indices(num_responses, k=1)
-    upper_triangle_similarities = cosine_similarities[upper_triangle_indices]
+        # Step 3: Calculate cosine similarity
+        num_responses = len(all_responses)
+        cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
 
-    # Calculate average, max, and min cosine similarities
-    average_similarity = np.mean(upper_triangle_similarities)
-    max_similarity = np.max(upper_triangle_similarities)
-    min_similarity = np.min(upper_triangle_similarities)
+        # Extract the upper triangle of the similarity matrix (excluding the diagonal)
+        upper_triangle_indices = np.triu_indices(num_responses, k=1)
+        upper_triangle_similarities = cosine_similarities[upper_triangle_indices]
 
-    # Write results to file
-    with open(output_file, 'w') as f:
-        f.write("Cosine Similarities:\n")
-        for i in range(num_responses):
-            for j in range(i + 1, num_responses):
-                f.write(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}\n")
-        f.write(f"\nAverage Cosine Similarity: {average_similarity}\n")
-        f.write(f"Maximum Cosine Similarity: {max_similarity}\n")
-        f.write(f"Minimum Cosine Similarity: {min_similarity}")
+        # Calculate average, max, and min cosine similarities
+        average_similarity = np.mean(upper_triangle_similarities)
+        max_similarity = np.max(upper_triangle_similarities)
+        min_similarity = np.min(upper_triangle_similarities)
 
+        # Write results to file
+        with open(output_file, 'w') as f:
+            f.write("Cosine Similarities Across All Responses:\n")
+            for i in range(num_responses):
+                for j in range(i + 1, num_responses):
+                    f.write(f"Row {i+1} vs Row {j+1}: {cosine_similarities[i][j]}\n")
+            f.write(f"\nAverage Cosine Similarity: {average_similarity}\n")
+            f.write(f"Maximum Cosine Similarity: {max_similarity}\n")
+            f.write(f"Minimum Cosine Similarity: {min_similarity}\n")
 
+# Main code to run the analysis
 if __name__ == "__main__":
-    # Input folder path and phrase
-    folder_path = input("Please input a folder path: ")
+    # Input parent folder path and phrase
+    parent_folder_path = input("Please input the parent folder path: ")
     phrase = input("Please enter the phrase that appears right before the start of a new response: ")
     output_file = input("Please input the output file name (e.g., output.txt): ")
 
-    # Get all file paths in the folder
-    file_paths = [os.path.join(folder_path, file_name) for file_name in os.listdir(folder_path) if file_name.endswith('.txt')]
+    # Calculate cosine similarities and write results to file for all responses in all subfolders
+    calculate_cosine_similarity(parent_folder_path, phrase, output_file)
 
-    if not file_paths:
-        print(f"No text files found in the folder: {folder_path}")
-    else:
-        # Calculate cosine similarities and write results to file
-        calculate_cosine_similarity(file_paths, phrase, output_file)
-
-        print(f"Results have been written to {output_file}.")
+    print(f"Results have been written to {output_file}.")
