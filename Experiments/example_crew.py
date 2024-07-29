@@ -1,11 +1,6 @@
-import sys
-from io import StringIO
 from langchain_community.llms import Ollama
 from crewai import Agent, Task, Crew, Process
 
-
-# verbose_output = StringIO()
-# sys.stdout = verbose_output
 
 model = Ollama(model= 'llama3')
  
@@ -64,19 +59,6 @@ crew = Crew(
  
 output = crew.kickoff()
 print(output)
-
-# # automatically log
-# sys.stdout = sys.__stdout__
-# verbose_output.seek(0)
-# verbose_output_content = verbose_output.read()
-# print(verbose_output_content)
-# with open('verbose.txt', 'a') as verbose_file:
-#     verbose_file.write(verbose_output_content)
-
-# # only output
-# with open('output.txt', 'a') as output_file:
-#     output_file.write(output)
-
 
 
 
