@@ -3,9 +3,9 @@ from crewai import Task
 class BiologicalAnalysisTask():
     def research(self, agent, genes):
         return Task(
-            description = f"Research the '{genes}' and make a hypothesis based on biological                      evidence",
+            description = f"Research the '{genes}' and make a hypothesis based on biological evidence",
             agent = agent,
-            expected_output = "1000 word count of biological information based on the genes",
+            expected_output = "50 word count of biological information based on the genes",
         )
 
     def summary(self, agent, genes): 
