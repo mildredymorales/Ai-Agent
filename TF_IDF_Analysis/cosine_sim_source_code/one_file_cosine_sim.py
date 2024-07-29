@@ -5,6 +5,8 @@ from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import re
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Download NLTK resources (if not already downloaded)
 nltk.download('punkt', quiet=True)
@@ -110,6 +112,8 @@ tfidf_matrix = vectorizer.fit_transform(processed_responses)
 num_responses = len(processed_responses)
 cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
 # cosine_sim = cosine_similarity(tfidf_matrix[0], tfidf_matrix[1])
+
+# Plot heat map
 
 # Extract the upper triangle of the similarity matrix (excluding the diagonal)
 upper_triangle_indices = np.triu_indices(num_responses, k=1)
