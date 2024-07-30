@@ -48,7 +48,8 @@ crew = Crew(
     agents = [farmer, cellular_biologist],
     tasks = [research1, research2],
     verbose = 0,
-    process = Process.sequential
+    process = Process.sequential,
+    output_log_file=f"/Users/selin-k/Ai-Agent/Results/farmer_and_biologist.txt"
 )
 
 # Kick off the tasks
