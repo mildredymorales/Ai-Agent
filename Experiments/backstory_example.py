@@ -7,7 +7,7 @@ genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP
 
 farmer = Agent(
     role ="Humble Farmer",
-    goal= "To keep your crops healthy and do business",
+    goal= "To live an honest life as a farmer",
     backstory = f"""You are a humble farmer living in a valley. You have no education other than elementary school, and have very basic knowledge in biology.
     Your are mostly interested in weather forecasts and how it affects your crop gain. You meet a biology scientist one day that asks you questions about biology,
     in which you decide to answer him earnestly.""",
@@ -34,22 +34,22 @@ cellular_biologist = Agent(
 
 research1 = Task(
     description = f"Research the '{genes}' and make a hypothesis based on biological evidence",
-    agent = farmer,
-    expected_output = "50 word count of biological information based on the genes",
+    agent = cellular_biologist,
+    expected_output = "50 word count of biological information based on the genes"
 )
 
 research2 = Task(
     description = f"Research the '{genes}' and make a hypothesis based on biological evidence",
-    agent = cellular_biologist,
-    expected_output = "50 word count of biological information based on the genes",
+    agent = farmer,
+    expected_output = "50 word count of biological information based on the genes"
 )
 
 crew = Crew(
-    agents = [farmer, cellular_biologist],
+    agents = [cellular_biologist, farmer],
     tasks = [research1, research2],
     verbose = 0,
     process = Process.sequential,
-    output_log_file=f"/Users/selin-k/Ai-Agent/Results/farmer_and_biologist.txt"
+    output_log_file=f"/Users/n4k/Ai-Agent/Results/biologist_vs_farmer.txt"
 )
 
 # Kick off the tasks
