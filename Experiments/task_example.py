@@ -33,14 +33,14 @@ long_task = Task(
     integrates these findings, providing a thorough understanding of the genes biological 
     relevance""",
     agent = research_agent,
-    expected_output = "a report with multiple pages",
+    expected_output = "a couple of paragraphs",
 )
 
 
  
 crew = Crew(
     agents = [research_agent],
-    tasks = [short_task],
+    tasks = [long_task],
     verbose = True,
     process = Process.sequential, 
     output_log_file=True,
