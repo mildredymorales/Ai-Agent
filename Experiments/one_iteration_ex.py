@@ -10,7 +10,8 @@ from Source_Code.tasks import BiologicalAnalysisTask
 agents = BiologicalAgents()
 tasks = BiologicalAnalysisTask()
 
-task_name = input("What is the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name\n")
+log_path = input("Enter the path for log file.\n")
+task_name = input("What is the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name.\n")
 
 # Define the list of genes
 genes = 'GBP5, OASL, ANKRD22, AGR2, LGALS4, KIF14, KIF20A, KIF18B, DLGAP5, TROAP, DEPDC1, PRR11'
@@ -33,7 +34,7 @@ crew = Crew(
     agents=agents_list,
     tasks=tasks_list,
     verbose=True,
-    output_log_file=f"/Users/n4k/Ai-Agent/Results/one_iteration/{task_name}.txt",
+    output_log_file=f"{log_path}/{task_name}.txt",
 )
 
 # Kick off the tasks

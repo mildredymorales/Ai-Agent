@@ -24,7 +24,7 @@ tasks = BiologicalAnalysisTask()
 print("## Welcome to the Biology Crew")
 print('-------------------------------')
 
-
+user_path = input("Enter path for log file.\n")
 agent_name = input("What is the the biological agent you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name.\n")
 task_name = input("What is the the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name\n")
 
@@ -39,7 +39,7 @@ task = getattr(tasks, task_name)(agent, genes)
 # compare_task = tasks.tf_idf(compare_agent, task)
 
 # log directory for full name 
-directory_path = f"/Users/mildredmorales-paredes/Ai-Agent/Results/{task_name}"
+directory_path = f"{user_path}/{task_name}"
 log_filename = f"{task_name}_task_{agent_name}_agent_log.txt"
 log_path = os.path.join(directory_path, log_filename)
 

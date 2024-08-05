@@ -70,7 +70,7 @@ def test_agent_execution_with_specific_tools():
 This file is just trying to play around for how tool implementation may work.
 """
 
-sys.path.insert(0, '/Users/mildredmorales-paredes/Ai-Agent')
+# sys.path.insert(0, 'path for ai-agent folder that holds everything')
 
 from Source_Code.agents import BiologicalAgents
 from Source_Code.tasks import BiologicalAnalysisTask
