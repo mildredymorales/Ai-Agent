@@ -9,11 +9,13 @@ This is the iterations branch which focuses on running and saving experiments th
 # Experiments
 Within the experiments directory, there are two experiments. The variability_exp.py focuses on an experiment of running one task and one agent at a time for 10 iterations. The one_teration_ex.py focuses on an experiment of one task with all 10 agents at once for only one iteration. The former file has input parameters once run. You must enter which agent you want to analyze and what task. An example:
 
- % python3 variability_exp.py
- What is the the biological agent you want it to specifically analyze as? Please enter    with NO quotes. For now it is sensitive so enter the exact function name.
- drug_dev
- What is the the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name
- cell_comm
+```
+% python3 variability_exp.py
+What is the the biological agent you want it to specifically analyze as? Please enter    with NO quotes. For now it is sensitive so enter the exact function name.
+drug_dev
+What is the the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name
+cell_comm
+```
 
 # Results
 Results from conducted experiments are stored in the results folder automatically from the experiment files. There are folders for each task, which contains the multiple runs for each agent using variability_exp.py
