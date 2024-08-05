@@ -8,13 +8,14 @@ This is the iterations branch which focuses on running and saving experiments th
 
 # Experiments
 Within the experiments directory, there are two experiments. The variability_exp.py focuses on an experiment of running one task and one agent at a time for 10 iterations. The one_teration_ex.py focuses on an experiment of one task with all 10 agents at once for only one iteration. The former file has input parameters once run. You must enter which agent you want to analyze and what task. An example:
->> % python3 variability_exp.py
->> ## Welcome to the Biology Crew
->> -------------------------------
->> What is the the biological agent you want it to specifically analyze as? Please enter    with NO quotes. For now it is sensitive so enter the exact function name.
-> drug_dev
->> What is the the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name
-> cell_comm
+
+ % python3 variability_exp.py
+ ## Welcome to the Biology Crew
+ -------------------------------
+ What is the the biological agent you want it to specifically analyze as? Please enter    with NO quotes. For now it is sensitive so enter the exact function name.
+ drug_dev
+ What is the the biological term you want it to specifically analyze as? Please enter with NO quotes. For now it is sensitive so enter the exact function name
+ cell_comm
 
 # Results
 Results from conducted experiments are stored in the results folder automatically from the experiment files. There are folders for each task, which contains the multiple runs for each agent using variability_exp.py
@@ -29,13 +30,13 @@ Whole_folder - This takes in a folder full of muliple folders and analyze all th
 To run the code it expects a file that includes all the responses, in which it will then separate the responses by using a phrase. Then it will preprocess all of the responses, and using TF-IDF vectorization it calculates cosine similarity values for every response against each other. 
 
 Example Run:
->> python3 TF_IDF_Analysis/cosine_sim_source_code/one_file_cosine_sim.py
->> please input your file's path:
-> /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_cell_cyc_agent_log.txt
->> Please input the heat map image file name (e.g., heatmap.png):
-> apop_cellular_biologist_heatmap.png
->> input output file name as txt:
-> apop_cellular_biologist_cosine_sim.txt
+ python3 TF_IDF_Analysis/cosine_sim_source_code/one_file_cosine_sim.py
+ please input your file's path:
+ /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_cell_cyc_agent_log.txt
+ Please input the heat map image file name (e.g., heatmap.png):
+ apop_cellular_biologist_heatmap.png
+ input output file name as txt:
+ apop_cellular_biologist_cosine_sim.txt
 
 
 # Environment Setup
