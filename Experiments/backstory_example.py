@@ -49,7 +49,7 @@ crew = Crew(
     tasks = [research1, research2],
     verbose = 0,
     process = Process.sequential,
-    output_log_file=f"/Users/n4k/Ai-Agent/Results/biologist_vs_farmer.txt"
+    output_log_file=True
 )
 
 # Kick off the tasks
