@@ -34,7 +34,8 @@ def separate_responses(file_path, phrase):
     return responses
 
 
-file_path = input("please input your file's path")
+file_path = input("please input your file's path:\n")
+heat_map_img = input("Please input the heat map image file name (e.g., heatmap.png):\n")
 # use phrase that appears right before start of a new response
 # cutting out some of the agent task description 
 phrase = 'status=completed'
@@ -124,8 +125,19 @@ average_similarity = np.mean(upper_triangle_similarities)
 max_similarity = np.max(upper_triangle_similarities)
 min_similarity = np.min(upper_triangle_similarities)
 
+def generate_heatmap(values):
+    # Plot heat map
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(values, cmap='YlGnBu', annot=False, fmt='.2f', square=True)
+    plt.title('Cosine Similarity Heatmap for Apoptosis')
+    plt.xlabel('Iteration Response Index')
+    plt.ylabel('Iteration Response Index')
+    plt.savefig(heat_map_img)
+    plt.close()
+
+
 # write results to file
-output_file = input("input output file name as txt")
+output_file = input("input output file name as txt:\n")
 with open(output_file, 'w') as f:
         f.write("Cosine Similarities:\n")
         f.write(f"\nFile path: {file_path}\n")
@@ -135,6 +147,7 @@ with open(output_file, 'w') as f:
         f.write(f"\nAverage Cosine Similarity:, {average_similarity}\n")
         f.write(f"Maximum Cosine Similarity:, {max_similarity}\n")
         f.write(f"Minimum Cosine Similarity:, {min_similarity}")
+        generate_heatmap(cosine_similarities)
 
 
 # print("Cosine Similarity:", cosine_sim[0][0])
