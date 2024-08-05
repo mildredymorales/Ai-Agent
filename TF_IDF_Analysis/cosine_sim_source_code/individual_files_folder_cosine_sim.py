@@ -95,14 +95,6 @@ def calculate_cosine_similarity(file_paths, phrase, output_file):
             f.write(f"Maximum Cosine Similarity: {max_similarity}\n")
             f.write(f"Minimum Cosine Similarity: {min_similarity}\n\n")
 
-            #      # Plot heat map
-            # plt.figure(figsize=(10, 8))
-            # sns.heatmap(cosine_similarities, cmap='YlGnBu', annot=False, fmt='.2f', square=True)
-            # plt.title('Cosine Similarity Heatmap for Apoptosis')
-            # plt.xlabel('Iteration Response Index')
-            # plt.ylabel('Iteration Response Index')
-            # plt.savefig(heat_map_img)
-            # plt.show()
 
 # Main code to run the analysis
 if __name__ == "__main__":
@@ -110,7 +102,7 @@ if __name__ == "__main__":
     folder_path = input("Please input a folder path: ")
     phrase = input("Please enter the phrase that appears right before the start of a new response: ")
     output_file = input("Please input the output file name (e.g., output.txt): ")
-    heat_map_img = input("Please input the heat map image file name (e.g., heatmap.png): ")
+   
 
     # Get all file paths in the folder
     file_paths = [os.path.join(folder_path, file_name) for file_name in os.listdir(folder_path) if file_name.endswith('.txt')]
@@ -119,7 +111,6 @@ if __name__ == "__main__":
         print(f"No text files found in the folder: {folder_path}")
     else:
         # Calculate cosine similarities and write results to file for each file
-        calculate_cosine_similarity(file_paths, phrase, output_file)
+        values = calculate_cosine_similarity(file_paths, phrase, output_file)
 
         print(f"Results have been written to {output_file}.")
-        print(f"Heat map has been saved to {heat_map_img}.")
