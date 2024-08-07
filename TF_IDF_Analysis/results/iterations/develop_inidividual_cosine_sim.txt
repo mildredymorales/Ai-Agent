@@ -1,4 +1,4 @@
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_cell_cyc_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_cell_cyc_agent_log.txt:
 Row 1 vs Row 2: 0.43091432001295815
 Row 1 vs Row 3: 0.5088350118849643
 Row 1 vs Row 4: 0.3797094446889775
@@ -49,7 +49,7 @@ Average Cosine Similarity: 0.46683991554780213
 Maximum Cosine Similarity: 0.6113496746699544
 Minimum Cosine Similarity: 0.29187110663634747
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_computational_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_computational_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.9239737234738871
 Row 1 vs Row 3: 0.6240506028901199
 Row 1 vs Row 4: 0.5999948964464665
@@ -110,7 +110,7 @@ Average Cosine Similarity: 0.6198360474925716
 Maximum Cosine Similarity: 0.9679871128346387
 Minimum Cosine Similarity: 0.3678778426960049
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_epigenetics_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_epigenetics_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.35033201074790205
 Row 1 vs Row 3: 0.5231489311855815
 Row 1 vs Row 4: 0.49621742649136613
@@ -161,7 +161,7 @@ Average Cosine Similarity: 0.43714049206427474
 Maximum Cosine Similarity: 0.6214601293709182
 Minimum Cosine Similarity: 0.30239714238790816
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_oncologist_physician_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_oncologist_physician_agent_log.txt:
 Row 1 vs Row 2: 0.5332050584896372
 Row 1 vs Row 3: 0.3690079240712701
 Row 1 vs Row 4: 0.5208417644703587
@@ -212,7 +212,7 @@ Average Cosine Similarity: 0.3413660614146436
 Maximum Cosine Similarity: 0.536747388280835
 Minimum Cosine Similarity: 0.09359034360777195
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_genereg_expert_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_genereg_expert_agent_log.txt:
 Row 1 vs Row 2: 0.5536221718063775
 Row 1 vs Row 3: 0.4339062463874392
 Row 1 vs Row 4: 0.5378099727424913
@@ -263,7 +263,7 @@ Average Cosine Similarity: 0.46611690915583637
 Maximum Cosine Similarity: 0.6409029455549825
 Minimum Cosine Similarity: 0.33033761652274424
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_onco_res_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_onco_res_agent_log.txt:
 Row 1 vs Row 2: 0.2228325202953161
 Row 1 vs Row 3: 0.36461287755061594
 Row 1 vs Row 4: 0.3358959674516918
@@ -314,7 +314,7 @@ Average Cosine Similarity: 0.4160800337564859
 Maximum Cosine Similarity: 0.6159278801303383
 Minimum Cosine Similarity: 0.1473755371210004
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_cellular_biologist_agent_log copy.txt:
+Cosine Similarities for {user_path}/develop/develop_task_cellular_biologist_agent_log copy.txt:
 Row 1 vs Row 2: 0.8436988001868791
 Row 1 vs Row 3: 0.5773681410405695
 Row 1 vs Row 4: 0.5224710418166871
@@ -375,7 +375,7 @@ Average Cosine Similarity: 0.6152740264735376
 Maximum Cosine Similarity: 0.8834212024821677
 Minimum Cosine Similarity: 0.37296257296935303
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_systems_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_systems_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.4366132735741981
 Row 1 vs Row 3: 0.2948888459823
 Row 1 vs Row 4: 0.49259130060041556
@@ -426,7 +426,7 @@ Average Cosine Similarity: 0.4332375544540551
 Maximum Cosine Similarity: 0.6686769449777744
 Minimum Cosine Similarity: 0.2703336926834784
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_drug_dev_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_drug_dev_agent_log.txt:
 Row 1 vs Row 2: 0.8681385747091647
 Row 1 vs Row 3: 0.588710480997829
 Row 1 vs Row 4: 0.6186499837005259
@@ -487,7 +487,7 @@ Average Cosine Similarity: 0.5965532500512115
 Maximum Cosine Similarity: 0.9614817581689483
 Minimum Cosine Similarity: 0.30482542331963003
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/develop/develop_task_molecular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/develop/develop_task_molecular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.47307281774766013
 Row 1 vs Row 3: 0.49036499776174286
 Row 1 vs Row 4: 0.4597420514653222
