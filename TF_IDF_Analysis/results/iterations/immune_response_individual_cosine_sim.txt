@@ -1,4 +1,4 @@
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_onco_res_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_onco_res_agent_log.txt:
 Row 1 vs Row 2: 0.38839586811734617
 Row 1 vs Row 3: 0.34587165886010746
 Row 1 vs Row 4: 0.3391371515529524
@@ -49,7 +49,7 @@ Average Cosine Similarity: 0.37882158905076413
 Maximum Cosine Similarity: 0.6283438548092728
 Minimum Cosine Similarity: 0.1584216099272883
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_systems_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_systems_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.7031044897862732
 Row 1 vs Row 3: 0.6324609544226147
 Row 1 vs Row 4: 0.6491525639446432
@@ -100,7 +100,7 @@ Average Cosine Similarity: 0.5898058239774219
 Maximum Cosine Similarity: 0.7399112136198283
 Minimum Cosine Similarity: 0.43169289159053453
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_drug_dev_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_drug_dev_agent_log.txt:
 Row 1 vs Row 2: 0.45774527879008986
 Row 1 vs Row 3: 0.20461514818856075
 Row 1 vs Row 4: 0.35783851109141895
@@ -151,7 +151,7 @@ Average Cosine Similarity: 0.42124543207052395
 Maximum Cosine Similarity: 0.731904928582455
 Minimum Cosine Similarity: 0.159519244104332
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_epigenetics_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_epigenetics_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.5973892601408785
 Row 1 vs Row 3: 0.4543420573213933
 Row 1 vs Row 4: 0.5569810708071415
@@ -202,7 +202,7 @@ Average Cosine Similarity: 0.5367227057149719
 Maximum Cosine Similarity: 0.6445294741883808
 Minimum Cosine Similarity: 0.4393011077477209
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_genereg_expert_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_genereg_expert_agent_log.txt:
 Row 1 vs Row 2: 0.6118477449443266
 Row 1 vs Row 3: 0.27137006239876305
 Row 1 vs Row 4: 0.6107900907189451
@@ -253,7 +253,7 @@ Average Cosine Similarity: 0.539177265835941
 Maximum Cosine Similarity: 0.717272190460391
 Minimum Cosine Similarity: 0.27137006239876305
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_cellular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_cellular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.3741683159964449
 Row 1 vs Row 3: 0.5209147865959389
 Row 1 vs Row 4: 0.4552001831370967
@@ -304,7 +304,7 @@ Average Cosine Similarity: 0.4888922685522849
 Maximum Cosine Similarity: 0.6626838450619164
 Minimum Cosine Similarity: 0.18880170266774177
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_computational_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_computational_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.48962145145742036
 Row 1 vs Row 3: 0.5619719234976697
 Row 1 vs Row 4: 0.5553279490127307
@@ -355,7 +355,7 @@ Average Cosine Similarity: 0.5477823684726122
 Maximum Cosine Similarity: 0.6822473982185325
 Minimum Cosine Similarity: 0.4148734712412038
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_molecular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_molecular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.755021720242506
 Row 1 vs Row 3: 0.21397795382951285
 Row 1 vs Row 4: 0.1954505585395709
@@ -406,7 +406,7 @@ Average Cosine Similarity: 0.4263257050584575
 Maximum Cosine Similarity: 0.755021720242506
 Minimum Cosine Similarity: 0.1645980940138021
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_cell_cyc_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_cell_cyc_agent_log.txt:
 Row 1 vs Row 2: 0.6735234503225762
 Row 1 vs Row 3: 0.6411822170769215
 Row 1 vs Row 4: 0.637344941120233
@@ -457,7 +457,7 @@ Average Cosine Similarity: 0.539986328336443
 Maximum Cosine Similarity: 0.6970791588961074
 Minimum Cosine Similarity: 0.2763117458680919
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/immune_response/immune_response_task_oncologist_physician_agent_log.txt:
+Cosine Similarities for {user_path}/immune_response/immune_response_task_oncologist_physician_agent_log.txt:
 Row 1 vs Row 2: 0.60555080098428
 Row 1 vs Row 3: 0.2990212418976331
 Row 1 vs Row 4: 0.5232703456855917
