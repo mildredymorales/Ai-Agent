@@ -10,7 +10,7 @@ eventually going through all the 10 tasks and agents
 Once it is ran it will ask for input, e.g cell_cyc for agent and cell_cycle for task
 """
 
-sys.path.insert(0, '/Users/mildredmorales-paredes/Ai-Agent')
+sys.path.insert(0, '{path}')
 
 from Source_Code.agents import BiologicalAgents
 from Source_Code.tasks import BiologicalAnalysisTask
