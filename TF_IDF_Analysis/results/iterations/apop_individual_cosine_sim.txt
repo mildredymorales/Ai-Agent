@@ -1,4 +1,4 @@
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_cellular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_cellular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.5225216754140535
 Row 1 vs Row 3: 0.4842837366316764
 Row 1 vs Row 4: 0.507809788016147
@@ -49,7 +49,7 @@ Average Cosine Similarity: 0.5384402381159397
 Maximum Cosine Similarity: 0.6916206214913612
 Minimum Cosine Similarity: 0.37677595577927286
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_cell_cyc_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_cell_cyc_agent_log.txt:
 Row 1 vs Row 2: 0.0601664535858136
 Row 1 vs Row 3: 0.16779741023774067
 Row 1 vs Row 4: 0.06638145625513228
@@ -100,7 +100,7 @@ Average Cosine Similarity: 0.4180516490947708
 Maximum Cosine Similarity: 0.7219083861843589
 Minimum Cosine Similarity: 0.0601664535858136
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_oncologist_physician_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_oncologist_physician_agent_log.txt:
 Row 1 vs Row 2: 0.5937877517924391
 Row 1 vs Row 3: 0.4231434832523362
 Row 1 vs Row 4: 0.42580060191341795
@@ -151,7 +151,7 @@ Average Cosine Similarity: 0.49110091523512006
 Maximum Cosine Similarity: 0.6649261135375879
 Minimum Cosine Similarity: 0.2942181991114684
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_epigenetics_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_epigenetics_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.4934926820858183
 Row 1 vs Row 3: 0.6575587518223908
 Row 1 vs Row 4: 0.4799621059234237
@@ -202,7 +202,7 @@ Average Cosine Similarity: 0.542999047792412
 Maximum Cosine Similarity: 0.6575587518223908
 Minimum Cosine Similarity: 0.41452547037146975
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_computational_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_computational_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.14989171424742098
 Row 1 vs Row 3: 0.14461199062641322
 Row 1 vs Row 4: 0.23297572592948076
@@ -253,7 +253,7 @@ Average Cosine Similarity: 0.41153777873697417
 Maximum Cosine Similarity: 0.7073316810241425
 Minimum Cosine Similarity: 0.13421137052702736
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_systems_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_systems_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.6954935985889538
 Row 1 vs Row 3: 0.5078311849085138
 Row 1 vs Row 4: 0.6339431683148247
@@ -304,7 +304,7 @@ Average Cosine Similarity: 0.5769885137640339
 Maximum Cosine Similarity: 0.751994450543293
 Minimum Cosine Similarity: 0.41052304990595956
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_molecular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_molecular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.48772786765196485
 Row 1 vs Row 3: 0.5385876924660036
 Row 1 vs Row 4: 0.4886330310971168
@@ -355,7 +355,7 @@ Average Cosine Similarity: 0.5604031006635006
 Maximum Cosine Similarity: 0.7316537610991535
 Minimum Cosine Similarity: 0.4017702705610619
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_onco_res_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_onco_res_agent_log.txt:
 Row 1 vs Row 2: 0.47730935556146364
 Row 1 vs Row 3: 0.19747091844021422
 Row 1 vs Row 4: 0.6556647895485936
@@ -406,7 +406,7 @@ Average Cosine Similarity: 0.4742597232696169
 Maximum Cosine Similarity: 0.6863415033275432
 Minimum Cosine Similarity: 0.1719465298845788
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_genereg_expert_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_genereg_expert_agent_log.txt:
 Row 1 vs Row 2: 0.5338021382329944
 Row 1 vs Row 3: 0.6076298828682448
 Row 1 vs Row 4: 0.6586799753860647
@@ -457,7 +457,7 @@ Average Cosine Similarity: 0.5403384412529086
 Maximum Cosine Similarity: 0.6735034915912169
 Minimum Cosine Similarity: 0.34868964823719234
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/apop/apop_task_drug_dev_agent_log.txt:
+Cosine Similarities for {user_path}/apop/apop_task_drug_dev_agent_log.txt:
 Row 1 vs Row 2: 0.6225450310278423
 Row 1 vs Row 3: 0.5325827126885043
 Row 1 vs Row 4: 0.43333538797356896
