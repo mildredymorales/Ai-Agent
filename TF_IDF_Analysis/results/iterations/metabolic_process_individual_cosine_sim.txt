@@ -1,4 +1,4 @@
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_genereg_expert_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_genereg_expert_agent_log.txt:
 Row 1 vs Row 2: 0.5326197223711984
 Row 1 vs Row 3: 0.5119425231240045
 Row 1 vs Row 4: 0.5588993566460858
@@ -49,7 +49,7 @@ Average Cosine Similarity: 0.44331829121553706
 Maximum Cosine Similarity: 0.644797739605681
 Minimum Cosine Similarity: 0.20865601990651667
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_oncologist_physician_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_oncologist_physician_agent_log.txt:
 Row 1 vs Row 2: 0.39132386817986636
 Row 1 vs Row 3: 0.23439395354257828
 Row 1 vs Row 4: 0.349478947063491
@@ -100,7 +100,7 @@ Average Cosine Similarity: 0.3943521315064069
 Maximum Cosine Similarity: 0.6832694326120982
 Minimum Cosine Similarity: 0.15165005634047543
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_computational_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_computational_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.5933457433128502
 Row 1 vs Row 3: 0.36178447717805723
 Row 1 vs Row 4: 0.5206136519060419
@@ -151,7 +151,7 @@ Average Cosine Similarity: 0.44357258593777166
 Maximum Cosine Similarity: 0.6245915702964148
 Minimum Cosine Similarity: 0.24145331592711974
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_cell_cyc_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_cell_cyc_agent_log.txt:
 Row 1 vs Row 2: 0.5122927907150655
 Row 1 vs Row 3: 0.4218926888059547
 Row 1 vs Row 4: 0.47397122121237834
@@ -202,7 +202,7 @@ Average Cosine Similarity: 0.45038230704571797
 Maximum Cosine Similarity: 0.6025590950824425
 Minimum Cosine Similarity: 0.2826826796694531
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_drug_dev_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_drug_dev_agent_log.txt:
 Row 1 vs Row 2: 0.16247636749143615
 Row 1 vs Row 3: 0.21063777190997762
 Row 1 vs Row 4: 0.3637650655863199
@@ -253,7 +253,7 @@ Average Cosine Similarity: 0.37281275724854
 Maximum Cosine Similarity: 0.6597167145199153
 Minimum Cosine Similarity: 0.12549735635425208
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_epigenetics_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_epigenetics_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.3271108850694634
 Row 1 vs Row 3: 0.3925041459093325
 Row 1 vs Row 4: 0.5518898081938808
@@ -304,7 +304,7 @@ Average Cosine Similarity: 0.4151297234181209
 Maximum Cosine Similarity: 0.5938844930589328
 Minimum Cosine Similarity: 0.20935848467275234
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_cellular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_cellular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.6402521819266317
 Row 1 vs Row 3: 0.5983011581056188
 Row 1 vs Row 4: 0.3646745449874597
@@ -355,7 +355,7 @@ Average Cosine Similarity: 0.466847993878604
 Maximum Cosine Similarity: 0.6964472986791189
 Minimum Cosine Similarity: 0.2767522702636724
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_molecular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_molecular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.5533358095277255
 Row 1 vs Row 3: 0.5023239936501503
 Row 1 vs Row 4: 0.5824693922649693
@@ -406,7 +406,7 @@ Average Cosine Similarity: 0.43737746478831796
 Maximum Cosine Similarity: 0.6743249164810147
 Minimum Cosine Similarity: 0.15223585323961636
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_onco_res_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_onco_res_agent_log.txt:
 Row 1 vs Row 2: 0.4885285522649573
 Row 1 vs Row 3: 0.5646955789529365
 Row 1 vs Row 4: 0.3103480016283751
@@ -457,7 +457,7 @@ Average Cosine Similarity: 0.4902487055380679
 Maximum Cosine Similarity: 0.6882100155890895
 Minimum Cosine Similarity: 0.3069118084396075
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/metabolic_process/metabolic_process_task_systems_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/metabolic_process/metabolic_process_task_systems_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.2769403913192151
 Row 1 vs Row 3: 0.2687936738334699
 Row 1 vs Row 4: 0.4137593870830407
