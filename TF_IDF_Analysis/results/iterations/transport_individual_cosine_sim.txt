@@ -1,4 +1,4 @@
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_molecular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_molecular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.4859561389219088
 Row 1 vs Row 3: 0.42315887036309946
 Row 1 vs Row 4: 0.4782216213463249
@@ -49,7 +49,7 @@ Average Cosine Similarity: 0.45533356551568116
 Maximum Cosine Similarity: 0.6110733483013425
 Minimum Cosine Similarity: 0.3039478568056393
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_cell_cyc_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_cell_cyc_agent_log.txt:
 Row 1 vs Row 2: 0.2547560085483242
 Row 1 vs Row 3: 0.5047192810767472
 Row 1 vs Row 4: 0.12363213454954326
@@ -100,7 +100,7 @@ Average Cosine Similarity: 0.33679173084820835
 Maximum Cosine Similarity: 0.6588740771791306
 Minimum Cosine Similarity: 0.12363213454954326
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_computational_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_computational_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.38233487848240033
 Row 1 vs Row 3: 0.4310773461790882
 Row 1 vs Row 4: 0.38087183699916155
@@ -151,7 +151,7 @@ Average Cosine Similarity: 0.4185320815134769
 Maximum Cosine Similarity: 0.5714633396963567
 Minimum Cosine Similarity: 0.2937795616208089
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_cellular_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_cellular_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.29877986417579006
 Row 1 vs Row 3: 0.49250295915638254
 Row 1 vs Row 4: 0.47662257027967725
@@ -202,7 +202,7 @@ Average Cosine Similarity: 0.3664488746868358
 Maximum Cosine Similarity: 0.5665763562242236
 Minimum Cosine Similarity: 0.13159524313599222
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_onco_res_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_onco_res_agent_log.txt:
 Row 1 vs Row 2: 0.5098352477096869
 Row 1 vs Row 3: 0.22736589795609635
 Row 1 vs Row 4: 0.2625330854869171
@@ -253,7 +253,7 @@ Average Cosine Similarity: 0.3085147471976501
 Maximum Cosine Similarity: 0.6783640989269905
 Minimum Cosine Similarity: 0.10313285349932472
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_systems_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_systems_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.5805307393987151
 Row 1 vs Row 3: 0.5298638546165572
 Row 1 vs Row 4: 0.3976141596479829
@@ -304,7 +304,7 @@ Average Cosine Similarity: 0.44825786745505003
 Maximum Cosine Similarity: 0.676220638840758
 Minimum Cosine Similarity: 0.27282009724460904
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_oncologist_physician_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_oncologist_physician_agent_log.txt:
 Row 1 vs Row 2: 0.49735235707100783
 Row 1 vs Row 3: 0.2622244319903335
 Row 1 vs Row 4: 0.509031324363838
@@ -355,7 +355,7 @@ Average Cosine Similarity: 0.4216200739811527
 Maximum Cosine Similarity: 0.692040756669769
 Minimum Cosine Similarity: 0.13986086105503293
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_epigenetics_biologist_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_epigenetics_biologist_agent_log.txt:
 Row 1 vs Row 2: 0.15993422674725252
 Row 1 vs Row 3: 0.3095007457141312
 Row 1 vs Row 4: 0.2096309524835875
@@ -406,7 +406,7 @@ Average Cosine Similarity: 0.3969308024279355
 Maximum Cosine Similarity: 0.5507786986215253
 Minimum Cosine Similarity: 0.15993422674725252
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_drug_dev_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_drug_dev_agent_log.txt:
 Row 1 vs Row 2: 0.35732175646294545
 Row 1 vs Row 3: 0.41810496800206876
 Row 1 vs Row 4: 0.33870527309797843
@@ -457,7 +457,7 @@ Average Cosine Similarity: 0.458571856185151
 Maximum Cosine Similarity: 0.6060379669793886
 Minimum Cosine Similarity: 0.320672307380549
 
-Cosine Similarities for /Users/mildredmorales-paredes/Ai-Agent/Results/transport/transport_task_genereg_expert_agent_log.txt:
+Cosine Similarities for {user_path}/transport/transport_task_genereg_expert_agent_log.txt:
 Row 1 vs Row 2: 0.42695260738180774
 Row 1 vs Row 3: 0.5447549143010385
 Row 1 vs Row 4: 0.3876417790461948
