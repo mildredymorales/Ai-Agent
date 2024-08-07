@@ -1,4 +1,4 @@
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/metabolic_process.txt:
+Cosine Similarities for {user_path}/one_iteration/metabolic_process.txt:
 Row 1 vs Row 2: 0.9659877428592926
 Row 1 vs Row 3: 0.9416256456169961
 Row 1 vs Row 4: 0.9335470091604905
@@ -49,7 +49,7 @@ Average Cosine Similarity: 0.9273269795882162
 Maximum Cosine Similarity: 0.9820776553880984
 Minimum Cosine Similarity: 0.882701076787986
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/cell_comm.txt:
+Cosine Similarities for {user_path}/one_iteration/cell_comm.txt:
 Row 1 vs Row 2: 0.8065308356141281
 Row 1 vs Row 3: 0.790270972969608
 Row 1 vs Row 4: 0.7945261397172254
@@ -100,7 +100,7 @@ Average Cosine Similarity: 0.7668036078097243
 Maximum Cosine Similarity: 0.9673436488062297
 Minimum Cosine Similarity: 0.5232057411703258
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/signal_trans.txt:
+Cosine Similarities for {user_path}/one_iteration/signal_trans.txt:
 Row 1 vs Row 2: 0.7419528759497731
 Row 1 vs Row 3: 0.6309884369873412
 Row 1 vs Row 4: 0.6557822464013098
@@ -151,7 +151,7 @@ Average Cosine Similarity: 0.8268493006642545
 Maximum Cosine Similarity: 0.96746460308902
 Minimum Cosine Similarity: 0.6309884369873412
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/cell_cycle.txt:
+Cosine Similarities for {user_path}/one_iteration/cell_cycle.txt:
 Row 1 vs Row 2: 0.4276543196669343
 Row 1 vs Row 3: 0.45057473716725055
 Row 1 vs Row 4: 0.4467257051371627
@@ -202,7 +202,7 @@ Average Cosine Similarity: 0.7776067914996394
 Maximum Cosine Similarity: 0.974683923817285
 Minimum Cosine Similarity: 0.4276543196669343
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/reg_biop.txt:
+Cosine Similarities for {user_path}/one_iteration/reg_biop.txt:
 Row 1 vs Row 2: 0.6594028852569741
 Row 1 vs Row 3: 0.7588091151076792
 Row 1 vs Row 4: 0.6631713413207655
@@ -253,7 +253,7 @@ Average Cosine Similarity: 0.8475880563653113
 Maximum Cosine Similarity: 0.980203571365626
 Minimum Cosine Similarity: 0.6594028852569741
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/apop.txt:
+Cosine Similarities for {user_path}/one_iteration/apop.txt:
 Row 1 vs Row 2: 0.8370811198954453
 Row 1 vs Row 3: 0.8482148134870127
 Row 1 vs Row 4: 0.848640489087238
@@ -304,7 +304,7 @@ Average Cosine Similarity: 0.8700690194325632
 Maximum Cosine Similarity: 0.9808827223272074
 Minimum Cosine Similarity: 0.7515059902979583
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/repro.txt:
+Cosine Similarities for {user_path}/one_iteration/repro.txt:
 Row 1 vs Row 2: 0.7320307683452809
 Row 1 vs Row 3: 0.6439302650673379
 Row 1 vs Row 4: 0.6499918412074553
@@ -355,7 +355,7 @@ Average Cosine Similarity: 0.8597637529291116
 Maximum Cosine Similarity: 0.9749498718348564
 Minimum Cosine Similarity: 0.6422252901522607
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/transport.txt:
+Cosine Similarities for {user_path}/one_iteration/transport.txt:
 Row 1 vs Row 2: 0.8991972077199497
 Row 1 vs Row 3: 0.7503961306396555
 Row 1 vs Row 4: 0.7485931455681688
@@ -406,7 +406,7 @@ Average Cosine Similarity: 0.8848742307876898
 Maximum Cosine Similarity: 0.985036033261827
 Minimum Cosine Similarity: 0.7485931455681688
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/immune_response.txt:
+Cosine Similarities for {user_path}/one_iteration/immune_response.txt:
 Row 1 vs Row 2: 0.8273489444169718
 Row 1 vs Row 3: 0.6860908653034117
 Row 1 vs Row 4: 0.7214054175914296
@@ -457,7 +457,7 @@ Average Cosine Similarity: 0.8120873230193923
 Maximum Cosine Similarity: 0.9682730417040156
 Minimum Cosine Similarity: 0.6704965911401888
 
-Cosine Similarities for /Users/n4k/Ai-Agent/Results/one_iteration/develop.txt:
+Cosine Similarities for {user_path}/one_iteration/develop.txt:
 Row 1 vs Row 2: 0.4219787872913373
 Row 1 vs Row 3: 0.459788889073821
 Row 1 vs Row 4: 0.3997104309810107
